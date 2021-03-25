@@ -1,0 +1,215 @@
+<svg id="state-map" version="1.1" viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+<style>
+svg { background: #aaa; font: 1em serif; }
+.concrete { fill: #777; }
+.influence { fill-opacity: 0.1; stroke-width: 0; }
+
+.state .labs { fill: #000; fill-opacity: 0.5; }
+.state .forts { fill: #000; }
+.state .other { fill: #990; }
+/*.state .other { display: none; }*/
+
+.viv-1 .alliance { fill: #00f; }
+.viv-1 .labs { fill: #00f; }
+
+.viv-2 .alliance { fill: #909; }
+.viv-2 .labs { fill: #909; }
+</style>
+<defs>
+	<pattern id="capital-grid" width="2%" height="2%">
+		<rect x="0" y="0" width="2" height="2" stroke="#000" stroke-width="0.1" class="concrete" />
+	</pattern>
+	<!-- Level 1 lab - offset from center: 6 -->
+	<symbol id="lab1" width="14" height="14">
+		<rect x="0" y="0" width="14" height="14" class="concrete" />
+		<rect x="6" y="6" width="2" height="2" class="lab" />
+	</symbol>
+	<!-- Level 2 lab - offset from center: 6 -->
+	<symbol id="lab2" width="15" height="15">
+		<rect x="0" y="0" width="15" height="15" class="concrete" />
+		<rect x="6" y="6" width="3" height="3" class="lab" />
+	</symbol>
+	<!-- Level 3 lab - offset from center: 6 -->
+	<symbol id="lab3" width="16" height="16">
+		<rect x="0" y="0" width="16" height="16" class="concrete" />
+		<rect x="6" y="6" width="4" height="4" class="lab" />
+	</symbol>
+	<!-- Level 4 lab - offset from center: 6 -->
+	<symbol id="lab4" width="16" height="16">
+		<rect x="0" y="0" width="16" height="16" class="concrete" />
+		<rect x="6" y="6" width="4" height="4" class="lab" />
+	</symbol>
+
+	<!-- Fortified Bunker - offset from center: 18 -->
+	<symbol id="bunker" width="40" height="40">
+		<rect x="0" y="0" width="40" height="40" class="concrete" />
+		<rect x="17" y="17" width="6" height="6" class="fort" />
+	</symbol>
+	<!-- Fortified Facility - offset from center: 28 -->
+	<symbol id="facility" width="60" height="60">
+		<rect x="0" y="0" width="60" height="60" class="concrete" />
+		<rect x="27" y="27" width="6" height="6" class="fort" />
+	</symbol>
+
+	<!-- headquarters - offset from center: 6 -->
+	<symbol id="hq" width="14" height="14">
+		<rect x="0" y="0" width="14" height="14" class="influence" />
+		<rect x="6" y="6" width="2" height="2" />
+	</symbol>
+	<!-- trap -->
+	<symbol id="trap" width="2" height="2">
+		<rect x="0" y="0" width="2" height="2" />
+	</symbol>
+	<!-- tower - offset from center: 3 -->
+	<symbol id="tower" width="7" height="7">
+		<rect x="0" y="0" width="7" height="7" class="influence" />
+		<rect x="3" y="3" width="1" height="1" />
+	</symbol>
+</defs>
+
+
+<!-- scale to invert x/y, translate to center, rotate -->
+<g transform="scale(-1,1) translate(-1650, 350) rotate(-135, 650, 650)">
+
+	<g class="state">
+		<!-- background -->
+		<rect x="0" y="0" height="1300" width="1300" fill="#cc9"><title>Wasteland</title></rect>
+		<rect x="360" y="360" height="580" width="580" fill="#ada"><title>Plains</title></rect>
+		<rect x="520" y="520" height="260" width="260" fill="#8c8"><title>Oasis</title></rect>
+		<rect x="600" y="600" height="100" width="100" fill="url(#capital-grid)"><title>Old Town</title></rect>
+
+		<!-- Capital -->
+		<g fill="#000">
+			<rect x="644" y="644" height="12" width="12" fill-opacity="0.7"><title>Capital</title></rect>
+			<rect x="645" y="645" height="1" width="1" />
+			<rect x="654" y="645" height="1" width="1" />
+			<rect x="645" y="654" height="1" width="1" />
+			<rect x="654" y="654" height="1" width="1" />
+			<rect x="648" y="648" height="4" width="4" />
+		</g>
+		<g fill-opacity="0.7">
+			<path d="M 644 646 h -6 v -2 h -14 v 14 h 18 v -2 h 2 z" fill="#00f"><title>WLC</title></path>
+			<path d="M 644 656 v 2 h -2 v 24 h 8 v -26 z" fill="#660"><title>EnK</title></path>
+			<path d="M 656 656 v 2 h 2 v 2 h 2 v 22 h -10 v -26 z" fill="#060"><title>GhL</title></path>
+			<path d="M 656 656 h 6 v 2 h 20 v -8 h -26 z" fill="#900"><title>CAP</title></path>
+			<path d="M 656 644 h 2 v -2 h 2 v -2 h 22 v 10 h -26 z" fill="#f66"><title>666</title></path>
+			<path d="M 656 644 v -6 h 2 v -20 h -8 v 26 z" fill="#099"><title>TW1</title></path>
+			<path d="M 644 644 v -2 h -2 v -2 h -2 v -22 h 10 v 26 z" fill="#ff6"><title>UDA</title></path>
+		</g>
+
+		<!-- Fortified structures -->
+		<g class="forts">
+			{% for row in state|selectattr('type', 'eq', 'facility') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 28}}" y="{{row.y|int - 28}}"><title>Fortified Facility {{row.descr|e}} ({{row.owner|e}})</title></use>
+			{% endfor %}
+			{% for row in state|selectattr('type', 'eq', 'bunker') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 18}}" y="{{row.y|int - 18}}"><title>Fortified Bunker {{row.descr|e}} ({{row.owner|e}})</title></use>
+			{% endfor %}
+		</g>
+
+		<!-- Labs -->
+		<g class="labs">
+			{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'ne', 'ViV') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+			{% endfor %}
+			{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'ne', 'ViV') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+			{% endfor %}
+			{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'ne', 'ViV') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+			{% endfor %}
+			{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'ne', 'ViV') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+			{% endfor %}
+		</g>
+
+		<!-- Other alliances -->
+		<g class="other">
+			{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'ne', 'ViV') %}
+			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
+			{% endfor %}
+			{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'ne', 'ViV') %}
+			<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"><title>({{row.owner}}) Influencer Trap</title></use>
+			{% endfor %}
+		</g>
+	</g>
+
+	<!-- ViV -->
+	<g class="viv-1">
+
+	<g class="alliance">
+		<!-- towers -->
+		{% for row in state|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 3}}" y="{{row.y|int - 3}}" />
+		{% endfor %}
+
+		<!-- alliance buildings -->
+		{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"><title>({{row.owner}}) Influencer Trap</title></use>
+		{% endfor %}
+	</g>
+
+	<!-- labs -->
+	<g class="labs">
+		{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+	</g>
+
+	</g>
+
+
+	<!-- viv -->
+	<g class="viv-2">
+
+	<g class="alliance">
+		<!-- towers -->
+		{% for row in state|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 3}}" y="{{row.y|int - 3}}" />
+		{% endfor %}
+
+		<!-- alliance buildings -->
+		{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"><title>({{row.owner}}) Influencer Trap</title></use>
+		{% endfor %}
+	</g>
+
+	<!-- labs -->
+	<g class="labs">
+		{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
+		{% endfor %}
+	</g>
+
+	</g>
+
+</g>
+
+<text x="880" y="830">ViV</text>
+<text x="900" y="650">viv</text>
+
+</svg>
