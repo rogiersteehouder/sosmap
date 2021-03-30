@@ -974,6 +974,25 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="964" y="981" />
 		<use href="#tower" x="971" y="974" />
 		<use href="#tower" x="978" y="975" />
+		<use href="#tower" x="955" y="1014" />
+		<use href="#tower" x="962" y="1019" />
+		<use href="#tower" x="966" y="1023" />
+		<use href="#tower" x="972" y="1030" />
+		<use href="#tower" x="978" y="1037" />
+		<use href="#tower" x="984" y="1044" />
+		<use href="#tower" x="991" y="1050" />
+		<use href="#tower" x="995" y="1054" />
+		<use href="#tower" x="998" y="1061" />
+		<use href="#tower" x="998" y="1068" />
+		<use href="#tower" x="1003" y="1072" />
+		<use href="#tower" x="1010" y="1078" />
+		<use href="#tower" x="1016" y="1071" />
+		<use href="#tower" x="1023" y="1065" />
+		<use href="#tower" x="1030" y="1065" />
+		<use href="#tower" x="1037" y="1065" />
+		<use href="#tower" x="1044" y="1065" />
+		<use href="#tower" x="1051" y="1065" />
+		<use href="#tower" x="1056" y="1067" />
 
 		<!-- alliance buildings -->
 		<use href="#hq" x="860" y="931"><title>(viv) Plains Headquarters</title></use>
