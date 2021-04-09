@@ -14,15 +14,18 @@ svg { background: #aaa; font: 1em serif; }
 
 .viv-2 .alliance { fill: #909; }
 .viv-2 .labs { fill: #909; }
+
+.new { fill: #563; }
+.old { fill: #900; }
 </style>
 <defs>
 	<pattern id="capital-grid" width="2%" height="2%">
 		<rect x="0" y="0" width="2" height="2" stroke="#000" stroke-width="0.1" class="concrete" />
 	</pattern>
 	<!-- Level 1 lab - offset from center: 6 -->
-	<symbol id="lab1" width="14" height="14">
-		<rect x="0" y="0" width="14" height="14" class="concrete" />
-		<rect x="6" y="6" width="2" height="2" class="lab" />
+	<symbol id="lab1" width="15" height="15">
+		<rect x="0" y="0" width="15" height="15" class="concrete" />
+		<rect x="6" y="6" width="3" height="3" class="lab" />
 	</symbol>
 	<!-- Level 2 lab - offset from center: 6 -->
 	<symbol id="lab2" width="15" height="15">
@@ -99,134 +102,137 @@ svg { background: #aaa; font: 1em serif; }
 
 		<!-- Fortified structures -->
 		<g class="forts">
-			<use href="#facility" x="460" y="620"><title>Fortified Facility 1 (GhL)</title></use>
-			<use href="#facility" x="620" y="460"><title>Fortified Facility 2 (WLC)</title></use>
-			<use href="#facility" x="780" y="620"><title>Fortified Facility 3 (UDA)</title></use>
 			<use href="#facility" x="620" y="780"><title>Fortified Facility 4 (666)</title></use>
-			<use href="#bunker" x="240" y="880"><title>Fortified Bunker 1 (rank 16+)</title></use>
-			<use href="#bunker" x="900" y="1020"><title>Fortified Bunker 10 (all)</title></use>
-			<use href="#bunker" x="640" y="1020"><title>Fortified Bunker 11 (all)</title></use>
+			<use href="#facility" x="460" y="620"><title>Fortified Facility 1 (EAS)</title></use>
+			<use href="#facility" x="780" y="620"><title>Fortified Facility 3 (UDA)</title></use>
+			<use href="#facility" x="620" y="460"><title>Fortified Facility 2 (WLC)</title></use>
 			<use href="#bunker" x="380" y="1020"><title>Fortified Bunker 12 (all)</title></use>
-			<use href="#bunker" x="240" y="620"><title>Fortified Bunker 2 (rank 11+)</title></use>
-			<use href="#bunker" x="240" y="360"><title>Fortified Bunker 3 (rank 11+)</title></use>
-			<use href="#bunker" x="380" y="240"><title>Fortified Bunker 4 (rank 6+)</title></use>
-			<use href="#bunker" x="640" y="240"><title>Fortified Bunker 5 (rank 6+)</title></use>
-			<use href="#bunker" x="900" y="240"><title>Fortified Bunker 6 (rank 6+)</title></use>
+			<use href="#bunker" x="640" y="1020"><title>Fortified Bunker 11 (all)</title></use>
+			<use href="#bunker" x="900" y="1020"><title>Fortified Bunker 10 (all)</title></use>
 			<use href="#bunker" x="1020" y="360"><title>Fortified Bunker 7 (all)</title></use>
 			<use href="#bunker" x="1020" y="620"><title>Fortified Bunker 8 (all)</title></use>
 			<use href="#bunker" x="1020" y="880"><title>Fortified Bunker 9 (all)</title></use>
+			<use href="#bunker" x="240" y="360"><title>Fortified Bunker 3 (rank 11+)</title></use>
+			<use href="#bunker" x="240" y="620"><title>Fortified Bunker 2 (rank 11+)</title></use>
+			<use href="#bunker" x="240" y="880"><title>Fortified Bunker 1 (rank 16+)</title></use>
+			<use href="#bunker" x="380" y="240"><title>Fortified Bunker 4 (rank 6+)</title></use>
+			<use href="#bunker" x="640" y="240"><title>Fortified Bunker 5 (rank 6+)</title></use>
+			<use href="#bunker" x="900" y="240"><title>Fortified Bunker 6 (rank 6+)</title></use>
 		</g>
 
 		<!-- Labs -->
 		<g class="labs">
+			<use href="#lab1" x="1082" y="522"><title>(666) Research Speed +5%</title></use>
 			<use href="#lab1" x="1142" y="422"><title>(666) Construction Speed +5%</title></use>
+			<use href="#lab1" x="1242" y="482"><title>(666) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="762" y="1242"><title>(888) Research Speed +5%</title></use>
+			<use href="#lab1" x="842" y="1162"><title>(888) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="1002" y="1162"><title>(888) Construction Speed +5%</title></use>
+			<use href="#lab1" x="802" y="42"><title>(Ca1) Resource Production +5%</title></use>
+			<use href="#lab1" x="982" y="142"><title>(Ca1) Research Speed +5%</title></use>
+			<use href="#lab1" x="1082" y="42"><title>(Ca1) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="862" y="142"><title>(cap) Construction Speed +5%</title></use>
+			<use href="#lab1" x="882" y="302"><title>(cap) Resource Production +5%</title></use>
+			<use href="#lab1" x="1082" y="1242"><title>(cap) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="1242" y="202"><title>(cap) Research Speed +5%</title></use>
+			<use href="#lab1" x="642" y="1082"><title>(CSI) Resource Production +5%</title></use>
+			<use href="#lab1" x="802" y="982"><title>(CSI) Research Speed +5%</title></use>
+			<use href="#lab1" x="1242" y="1082"><title>(DRR) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="202" y="642"><title>(EAS) Research Speed +5%</title></use>
+			<use href="#lab1" x="202" y="762"><title>(EAS) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="122" y="282"><title>(EnK) Construction Speed +5%</title></use>
+			<use href="#lab1" x="122" y="442"><title>(EnK) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="142" y="982"><title>(EnK) Research Speed +5%</title></use>
+			<use href="#lab1" x="42" y="202"><title>(ETV) Resource Production +5%</title></use>
 			<use href="#lab1" x="62" y="62"><title>(Ezx) Construction Speed +5%</title></use>
 			<use href="#lab1" x="122" y="602"><title>(HON) Construction Speed +5%</title></use>
-			<use href="#lab1" x="282" y="122"><title>(PHI) Construction Speed +5%</title></use>
-			<use href="#lab1" x="1162" y="682"><title>(RLw) Construction Speed +5%</title></use>
-			<use href="#lab1" x="162" y="1122"><title>(TAY) Construction Speed +5%</title></use>
-			<use href="#lab1" x="602" y="122"><title>(Tca) Construction Speed +5%</title></use>
-			<use href="#lab1" x="422" y="1142"><title>(TNO) Construction Speed +5%</title></use>
-			<use href="#lab1" x="142" y="862"><title>(TW1) Construction Speed +5%</title></use>
-			<use href="#lab1" x="682" y="1162"><title>(UDA) Construction Speed +5%</title></use>
-			<use href="#lab1" x="1122" y="162"><title>(WLC) Construction Speed +5%</title></use>
-			<use href="#lab1" x="1082" y="522"><title>(666) Research Speed +5%</title></use>
-			<use href="#lab1" x="762" y="1242"><title>(888) Research Speed +5%</title></use>
-			<use href="#lab1" x="982" y="142"><title>(Ca1) Research Speed +5%</title></use>
-			<use href="#lab1" x="1242" y="202"><title>(cap) Research Speed +5%</title></use>
-			<use href="#lab1" x="802" y="982"><title>(CSI) Research Speed +5%</title></use>
-			<use href="#lab1" x="142" y="982"><title>(EnK) Research Speed +5%</title></use>
-			<use href="#lab1" x="202" y="642"><title>(GhL) Research Speed +5%</title></use>
 			<use href="#lab1" x="202" y="362"><title>(HON) Research Speed +5%</title></use>
-			<use href="#lab1" x="202" y="42"><title>(PHI) Research Speed +5%</title></use>
-			<use href="#lab1" x="1242" y="762"><title>(RLw) Research Speed +5%</title></use>
-			<use href="#lab1" x="642" y="202"><title>(Tca) Research Speed +5%</title></use>
-			<use href="#lab1" x="982" y="802"><title>(TDA) Research Speed +5%</title></use>
-			<use href="#lab1" x="202" y="1242"><title>(TW1) Research Speed +5%</title></use>
-			<use href="#lab1" x="522" y="1082"><title>(UDA) Research Speed +5%</title></use>
-			<use href="#lab1" x="362" y="202"><title>(WLC) Research Speed +5%</title></use>
-			<use href="#lab1" x="1242" y="482"><title>(666) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="842" y="1162"><title>(888) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="1082" y="42"><title>(Ca1) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="1082" y="1242"><title>(cap) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="1242" y="1082"><title>(DRR) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="122" y="442"><title>(EnK) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="202" y="762"><title>(GhL) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="222" y="222"><title>(PHI) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="42" y="1082"><title>(REM) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="982" y="402"><title>(Spc) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="402" y="982"><title>(TAY) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="762" y="202"><title>(Tca) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="482" y="1242"><title>(UDA) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="442" y="122"><title>(WLC) Resource Gathering Speed +5%</title></use>
-			<use href="#lab1" x="802" y="42"><title>(Ca1) Resource Production +5%</title></use>
-			<use href="#lab1" x="882" y="302"><title>(cap) Resource Production +5%</title></use>
-			<use href="#lab1" x="642" y="1082"><title>(CSI) Resource Production +5%</title></use>
-			<use href="#lab1" x="42" y="202"><title>(ETV) Resource Production +5%</title></use>
 			<use href="#lab1" x="302" y="482"><title>(HON) Resource Production +5%</title></use>
 			<use href="#lab1" x="42" y="522"><title>(MOV) Resource Production +5%</title></use>
+			<use href="#lab1" x="202" y="42"><title>(PHI) Research Speed +5%</title></use>
+			<use href="#lab1" x="222" y="222"><title>(PHI) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="282" y="122"><title>(PHI) Construction Speed +5%</title></use>
 			<use href="#lab1" x="1142" y="302"><title>(PTR) Resource Production +5%</title></use>
+			<use href="#lab1" x="42" y="1082"><title>(REM) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="1082" y="642"><title>(RLw) Resource Production +5%</title></use>
+			<use href="#lab1" x="1162" y="682"><title>(RLw) Construction Speed +5%</title></use>
+			<use href="#lab1" x="1242" y="762"><title>(RLw) Research Speed +5%</title></use>
+			<use href="#lab1" x="982" y="402"><title>(Spc) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="1222" y="1222"><title>(Spc) Resource Production +5%</title></use>
+			<use href="#lab1" x="162" y="1122"><title>(TAY) Construction Speed +5%</title></use>
 			<use href="#lab1" x="302" y="1142"><title>(TAY) Resource Production +5%</title></use>
+			<use href="#lab1" x="402" y="982"><title>(TAY) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="522" y="42"><title>(Tca) Resource Production +5%</title></use>
+			<use href="#lab1" x="602" y="122"><title>(Tca) Construction Speed +5%</title></use>
+			<use href="#lab1" x="642" y="202"><title>(Tca) Research Speed +5%</title></use>
+			<use href="#lab1" x="762" y="202"><title>(Tca) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="982" y="802"><title>(TDA) Research Speed +5%</title></use>
+			<use href="#lab1" x="422" y="1142"><title>(TNO) Construction Speed +5%</title></use>
 			<use href="#lab1" x="42" y="802"><title>(TW1) Resource Production +5%</title></use>
+			<use href="#lab1" x="142" y="862"><title>(TW1) Construction Speed +5%</title></use>
+			<use href="#lab1" x="202" y="1242"><title>(TW1) Research Speed +5%</title></use>
+			<use href="#lab1" x="482" y="1242"><title>(UDA) Resource Gathering Speed +5%</title></use>
+			<use href="#lab1" x="522" y="1082"><title>(UDA) Research Speed +5%</title></use>
+			<use href="#lab1" x="682" y="1162"><title>(UDA) Construction Speed +5%</title></use>
 			<use href="#lab1" x="922" y="1082"><title>(UDA) Resource Production +5%</title></use>
-			<use href="#lab1" x="302" y="882"><title>(viv) Resource Production +5%</title></use>
+			<use href="#lab1" x="362" y="202"><title>(WLC) Research Speed +5%</title></use>
+			<use href="#lab1" x="442" y="122"><title>(WLC) Resource Gathering Speed +5%</title></use>
 			<use href="#lab1" x="482" y="302"><title>(WLC) Resource Production +5%</title></use>
+			<use href="#lab1" x="1122" y="162"><title>(WLC) Construction Speed +5%</title></use>
 			<use href="#lab2" x="1222" y="602"><title>(666) Training Speed +5%</title></use>
-			<use href="#lab2" x="922" y="1242"><title>(Ca1) Training Speed +5%</title></use>
-			<use href="#lab2" x="1022" y="262"><title>(cap) Training Speed +5%</title></use>
-			<use href="#lab2" x="602" y="982"><title>(CSI) Training Speed +5%</title></use>
-			<use href="#lab2" x="42" y="362"><title>(EnK) Training Speed +5%</title></use>
-			<use href="#lab2" x="302" y="682"><title>(GhL) Training Speed +5%</title></use>
-			<use href="#lab2" x="682" y="302"><title>(HON) Training Speed +5%</title></use>
-			<use href="#lab2" x="62" y="1222"><title>(TW1) Training Speed +5%</title></use>
-			<use href="#lab2" x="362" y="42"><title>(WLC) Training Speed +5%</title></use>
 			<use href="#lab2" x="1242" y="342"><title>(666) Troop Attack +5%</title></use>
-			<use href="#lab2" x="942" y="42"><title>(Ca1) Troop Attack +5%</title></use>
-			<use href="#lab2" x="1142" y="1142"><title>(cap) Troop Attack +5%</title></use>
-			<use href="#lab2" x="762" y="1082"><title>(CSI) Troop Attack +5%</title></use>
-			<use href="#lab2" x="42" y="942"><title>(GhL) Troop Attack +5%</title></use>
-			<use href="#lab2" x="202" y="522"><title>(HON) Troop Attack +5%</title></use>
-			<use href="#lab2" x="142" y="142"><title>(PHI) Troop Attack +5%</title></use>
-			<use href="#lab2" x="342" y="1242"><title>(TAY) Troop Attack +5%</title></use>
-			<use href="#lab2" x="482" y="202"><title>(WLC) Troop Attack +5%</title></use>
 			<use href="#lab2" x="682" y="62"><title>(Ca1) Troop Defense +5%</title></use>
-			<use href="#lab2" x="62" y="682"><title>(GhL) Troop Defense +5%</title></use>
-			<use href="#lab2" x="262" y="1022"><title>(GhL) Troop Defense +5%</title></use>
+			<use href="#lab2" x="922" y="1242"><title>(Ca1) Training Speed +5%</title></use>
+			<use href="#lab2" x="942" y="42"><title>(Ca1) Troop Attack +5%</title></use>
+			<use href="#lab2" x="1022" y="262"><title>(cap) Training Speed +5%</title></use>
+			<use href="#lab2" x="1142" y="1142"><title>(cap) Troop Attack +5%</title></use>
+			<use href="#lab2" x="602" y="982"><title>(CSI) Training Speed +5%</title></use>
+			<use href="#lab2" x="762" y="1082"><title>(CSI) Troop Attack +5%</title></use>
+			<use href="#lab2" x="42" y="942"><title>(EAS) Troop Attack +5%</title></use>
+			<use href="#lab2" x="62" y="682"><title>(EAS) Troop Defense +5%</title></use>
+			<use href="#lab2" x="262" y="1022"><title>(EAS) Troop Defense +5%</title></use>
+			<use href="#lab2" x="302" y="682"><title>(EAS) Training Speed +5%</title></use>
+			<use href="#lab2" x="42" y="362"><title>(EnK) Training Speed +5%</title></use>
+			<use href="#lab2" x="202" y="522"><title>(HON) Troop Attack +5%</title></use>
 			<use href="#lab2" x="302" y="302"><title>(HON) Troop Defense +5%</title></use>
+			<use href="#lab2" x="682" y="302"><title>(HON) Training Speed +5%</title></use>
+			<use href="#lab2" x="142" y="142"><title>(PHI) Troop Attack +5%</title></use>
 			<use href="#lab2" x="982" y="602"><title>(RLw) Troop Defense +5%</title></use>
+			<use href="#lab2" x="342" y="1242"><title>(TAY) Troop Attack +5%</title></use>
+			<use href="#lab2" x="62" y="1222"><title>(TW1) Training Speed +5%</title></use>
 			<use href="#lab2" x="602" y="1222"><title>(UDA) Troop Defense +5%</title></use>
+			<use href="#lab2" x="362" y="42"><title>(WLC) Training Speed +5%</title></use>
+			<use href="#lab2" x="482" y="202"><title>(WLC) Troop Attack +5%</title></use>
 			<use href="#lab2" x="1222" y="62"><title>(WLC) Troop Defense +5%</title></use>
 			<use href="#lab3" x="822" y="422"><title>(666) Construction Speed +8%</title></use>
-			<use href="#lab3" x="422" y="422"><title>(HON) Construction Speed +8%</title></use>
-			<use href="#lab3" x="402" y="702"><title>(TW1) Construction Speed +8%</title></use>
-			<use href="#lab3" x="882" y="742"><title>(UDA) Construction Speed +8%</title></use>
 			<use href="#lab3" x="402" y="562"><title>(HON) March Speed +15%</title></use>
+			<use href="#lab3" x="422" y="422"><title>(HON) Construction Speed +8%</title></use>
 			<use href="#lab3" x="822" y="822"><title>(TAF) March Speed +15%</title></use>
-			<use href="#lab3" x="522" y="862"><title>(TW1) March Speed +15%</title></use>
-			<use href="#lab3" x="562" y="402"><title>(WLC) March Speed +15%</title></use>
-			<use href="#lab3" x="862" y="522"><title>(WWW) March Speed +15%</title></use>
 			<use href="#lab3" x="422" y="822"><title>(TAY) Research Speed +8%</title></use>
 			<use href="#lab3" x="702" y="402"><title>(Tca) Research Speed +8%</title></use>
-			<use href="#lab3" x="862" y="622"><title>(UDA) Research Speed +8%</title></use>
-			<use href="#lab3" x="502" y="502"><title>(WLC) Research Speed +8%</title></use>
+			<use href="#lab3" x="402" y="702"><title>(TW1) Construction Speed +8%</title></use>
 			<use href="#lab3" x="482" y="742"><title>(TW1) Troop Attack +8%</title></use>
+			<use href="#lab3" x="522" y="862"><title>(TW1) March Speed +15%</title></use>
+			<use href="#lab3" x="862" y="622"><title>(UDA) Research Speed +8%</title></use>
+			<use href="#lab3" x="882" y="742"><title>(UDA) Construction Speed +8%</title></use>
+			<use href="#lab3" x="502" y="502"><title>(WLC) Research Speed +8%</title></use>
+			<use href="#lab3" x="562" y="402"><title>(WLC) March Speed +15%</title></use>
+			<use href="#lab3" x="862" y="522"><title>(WWW) March Speed +15%</title></use>
+			<use href="#lab4" x="742" y="482"><title>(cap) Troop Defense +8%</title></use>
+			<use href="#lab4" x="702" y="802"><title>(EAS) Troop Defense +8%</title></use>
+			<use href="#lab4" x="462" y="582"><title>(Enk) Troop Defense +8%</title></use>
 			<use href="#lab4" x="802" y="702"><title>(UDA) Troop Attack +8%</title></use>
 			<use href="#lab4" x="582" y="462"><title>(WLC) Troop Attack +8%</title></use>
-			<use href="#lab4" x="742" y="482"><title>(cap) Troop Defense +8%</title></use>
-			<use href="#lab4" x="462" y="582"><title>(Enk) Troop Defense +8%</title></use>
-			<use href="#lab4" x="702" y="802"><title>(GhL) Troop Defense +8%</title></use>
 		</g>
 
 		<!-- Other alliances -->
 		<g class="other">
 			<use href="#hq" x="802" y="692"><title>(393) Plains Headquarters</title></use>
 			<use href="#hq" x="679" y="510"><title>(888) Plains Headquarters</title></use>
+			<use href="#hq" x="702" y="934"><title>(888) Wasteland Headquarters</title></use>
+			<use href="#hq" x="812" y="936"><title>(8V8) Wasteland Headquarters</title></use>
+			<use href="#hq" x="347" y="461"><title>(ADN) Wasteland Headquarters</title></use>
+			<use href="#hq" x="912" y="937"><title>(AHS) Wasteland Headquarters</title></use>
 			<use href="#hq" x="910" y="695"><title>(BLC) Plains Headquarters</title></use>
 			<use href="#hq" x="901" y="382"><title>(Ca1) Plains Headquarters</title></use>
 			<use href="#hq" x="501" y="407"><title>(Ca5) Plains Headquarters</title></use>
@@ -235,13 +241,16 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#hq" x="762" y="778"><title>(CEO) Plains Headquarters</title></use>
 			<use href="#hq" x="694" y="783"><title>(CSI) Plains Headquarters</title></use>
 			<use href="#hq" x="660" y="863"><title>(DRR) Plains Headquarters</title></use>
+			<use href="#hq" x="190" y="632"><title>(Dzf) Wasteland Headquarters</title></use>
+			<use href="#hq" x="608" y="774"><title>(EAS) Plains Headquarters</title></use>
 			<use href="#hq" x="492" y="588"><title>(Enk) Plains Headquarters</title></use>
 			<use href="#hq" x="460" y="358"><title>(EpM) Plains Headquarters</title></use>
+			<use href="#hq" x="1033" y="925"><title>(ewK) Wasteland Headquarters</title></use>
 			<use href="#hq" x="465" y="804"><title>(ezx) Plains Headquarters</title></use>
 			<use href="#hq" x="515" y="788"><title>(Ezx) Plains Headquarters</title></use>
+			<use href="#hq" x="351" y="359"><title>(FTx) Wasteland Headquarters</title></use>
 			<use href="#hq" x="616" y="918"><title>(FTx) Plains Headquarters</title></use>
 			<use href="#hq" x="558" y="458"><title>(GAN) Plains Headquarters</title></use>
-			<use href="#hq" x="608" y="774"><title>(GhL) Plains Headquarters</title></use>
 			<use href="#hq" x="874" y="381"><title>(HDC) Plains Headquarters</title></use>
 			<use href="#hq" x="475" y="606"><title>(Hon) Plains Headquarters</title></use>
 			<use href="#hq" x="512" y="567"><title>(HON) Plains Headquarters</title></use>
@@ -249,6 +258,7 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#hq" x="607" y="444"><title>(NI6) Plains Headquarters</title></use>
 			<use href="#hq" x="447" y="483"><title>(PHI) Plains Headquarters</title></use>
 			<use href="#hq" x="792" y="367"><title>(PTR) Plains Headquarters</title></use>
+			<use href="#hq" x="745" y="352"><title>(Q29) Wasteland Headquarters</title></use>
 			<use href="#hq" x="648" y="930"><title>(REM) Plains Headquarters</title></use>
 			<use href="#hq" x="930" y="645"><title>(RLw) Plains Headquarters</title></use>
 			<use href="#hq" x="557" y="932"><title>(RUS) Plains Headquarters</title></use>
@@ -265,21 +275,11 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#hq" x="503" y="705"><title>(TW1) Plains Headquarters</title></use>
 			<use href="#hq" x="358" y="539"><title>(Twa) Plains Headquarters</title></use>
 			<use href="#hq" x="766" y="697"><title>(UDA) Plains Headquarters</title></use>
-			<use href="#hq" x="860" y="931"><title>(viv) Plains Headquarters</title></use>
 			<use href="#hq" x="484" y="498"><title>(wlc) Plains Headquarters</title></use>
 			<use href="#hq" x="568" y="512"><title>(WLC) Plains Headquarters</title></use>
 			<use href="#hq" x="796" y="585"><title>(WLF) Plains Headquarters</title></use>
 			<use href="#hq" x="459" y="884"><title>(Xxb) Plains Headquarters</title></use>
 			<use href="#hq" x="909" y="805"><title>(XXX) Plains Headquarters</title></use>
-			<use href="#hq" x="702" y="934"><title>(888) Wasteland Headquarters</title></use>
-			<use href="#hq" x="812" y="936"><title>(8V8) Wasteland Headquarters</title></use>
-			<use href="#hq" x="347" y="461"><title>(ADN) Wasteland Headquarters</title></use>
-			<use href="#hq" x="912" y="937"><title>(AHS) Wasteland Headquarters</title></use>
-			<use href="#hq" x="190" y="632"><title>(Dzf) Wasteland Headquarters</title></use>
-			<use href="#hq" x="1033" y="925"><title>(ewK) Wasteland Headquarters</title></use>
-			<use href="#hq" x="351" y="359"><title>(FTx) Wasteland Headquarters</title></use>
-			<use href="#hq" x="745" y="352"><title>(Q29) Wasteland Headquarters</title></use>
-			<use href="#hq" x="292" y="906"><title>(viv) Wasteland Headquarters</title></use>
 			<use href="#trap" x="727" y="576"><title>(666) Influencer Trap</title></use>
 			<use href="#trap" x="664" y="571"><title>(888) Influencer Trap</title></use>
 			<use href="#trap" x="910" y="695"><title>(BLC) Influencer Trap</title></use>
@@ -291,13 +291,13 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#trap" x="677" y="714"><title>(CSI) Influencer Trap</title></use>
 			<use href="#trap" x="668" y="863"><title>(DRR) Influencer Trap</title></use>
 			<use href="#trap" x="198" y="643"><title>(Dzf) Influencer Trap</title></use>
+			<use href="#trap" x="620" y="754"><title>(EAS) Influencer Trap</title></use>
 			<use href="#trap" x="490" y="591"><title>(EnK) Influencer Trap</title></use>
 			<use href="#trap" x="464" y="368"><title>(EpM) Influencer Trap</title></use>
 			<use href="#trap" x="477" y="809"><title>(ezx) Influencer Trap</title></use>
 			<use href="#trap" x="548" y="742"><title>(Ezx) Influencer Trap</title></use>
 			<use href="#trap" x="625" y="924"><title>(FTx) Influencer Trap</title></use>
 			<use href="#trap" x="564" y="460"><title>(GAN) Influencer Trap</title></use>
-			<use href="#trap" x="620" y="754"><title>(GhL) Influencer Trap</title></use>
 			<use href="#trap" x="886" y="390"><title>(HDC) Influencer Trap</title></use>
 			<use href="#trap" x="554" y="656"><title>(Hon) Influencer Trap</title></use>
 			<use href="#trap" x="563" y="575"><title>(HON) Influencer Trap</title></use>
@@ -317,7 +317,6 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#trap" x="547" y="914"><title>(Trq) Influencer Trap</title></use>
 			<use href="#trap" x="516" y="728"><title>(TW1) Influencer Trap</title></use>
 			<use href="#trap" x="760" y="700"><title>(UDA) Influencer Trap</title></use>
-			<use href="#trap" x="868" y="946"><title>(viv) Influencer Trap</title></use>
 			<use href="#trap" x="486" y="498"><title>(wlc) Influencer Trap</title></use>
 			<use href="#trap" x="565" y="539"><title>(WLC) Influencer Trap</title></use>
 			<use href="#trap" x="803" y="589"><title>(WLF) Influencer Trap</title></use>
@@ -376,6 +375,7 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="719" y="866" />
 		<use href="#tower" x="720" y="764" />
 		<use href="#tower" x="721" y="803" />
+		<use href="#tower" x="721" y="871" />
 		<use href="#tower" x="722" y="778" />
 		<use href="#tower" x="722" y="785" />
 		<use href="#tower" x="722" y="824" />
@@ -389,6 +389,7 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="726" y="859" />
 		<use href="#tower" x="726" y="866" />
 		<use href="#tower" x="728" y="803" />
+		<use href="#tower" x="728" y="871" />
 		<use href="#tower" x="729" y="834" />
 		<use href="#tower" x="730" y="796" />
 		<use href="#tower" x="730" y="827" />
@@ -492,7 +493,7 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="966" y="953" />
 		<use href="#tower" x="973" y="949" />
 		<use href="#tower" x="980" y="948" />
-		<use href="#tower" x="986" y="955" />
+		<use href="#tower" x="982" y="955" />
 		<use href="#tower" x="986" y="962" />
 		<use href="#tower" x="986" y="969" />
 		<use href="#tower" x="986" y="976" />
@@ -559,10 +560,7 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="1075" y="930" />
 		<use href="#tower" x="1075" y="970" />
 		<use href="#tower" x="1081" y="887" />
-		<use href="#tower" x="1081" y="937" />
 		<use href="#tower" x="1082" y="911" />
-		<use href="#tower" x="1082" y="944" />
-		<use href="#tower" x="1082" y="951" />
 		<use href="#tower" x="1088" y="836" />
 		<use href="#tower" x="1088" y="894" />
 		<use href="#tower" x="1089" y="873" />
@@ -667,20 +665,20 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="1235" y="934" />
 
 		<!-- alliance buildings -->
-		<use href="#hq" x="721" y="810"><title>(ViV) Plains Headquarters</title></use>
 		<use href="#hq" x="569" y="936"><title>(ViV) Wasteland Headquarters</title></use>
+		<use href="#hq" x="721" y="810"><title>(ViV) Plains Headquarters</title></use>
 		<use href="#trap" x="745" y="847"><title>(ViV) Influencer Trap</title></use>
 	</g>
 
 	<!-- labs -->
 	<g class="labs">
-		<use href="#lab1" x="1162" y="1002"><title>(ViV) Construction Speed +5%</title></use>
 		<use href="#lab1" x="1062" y="1062"><title>(ViV) Research Speed +5%</title></use>
-		<use href="#lab1" x="1162" y="842"><title>(ViV) Resource Gathering Speed +5%</title></use>
 		<use href="#lab1" x="1082" y="922"><title>(ViV) Resource Production +5%</title></use>
-		<use href="#lab2" x="1242" y="922"><title>(ViV) Training Speed +5%</title></use>
-		<use href="#lab2" x="1082" y="762"><title>(ViV) Troop Attack +5%</title></use>
+		<use href="#lab1" x="1162" y="842"><title>(ViV) Resource Gathering Speed +5%</title></use>
+		<use href="#lab1" x="1162" y="1002"><title>(ViV) Construction Speed +5%</title></use>
 		<use href="#lab2" x="982" y="982"><title>(ViV) Troop Defense +5%</title></use>
+		<use href="#lab2" x="1082" y="762"><title>(ViV) Troop Attack +5%</title></use>
+		<use href="#lab2" x="1242" y="922"><title>(ViV) Training Speed +5%</title></use>
 		<use href="#lab3" x="622" y="862"><title>(ViV) Construction Speed +8%</title></use>
 		<use href="#lab3" x="742" y="882"><title>(ViV) Research Speed +8%</title></use>
 	</g>
@@ -693,310 +691,331 @@ svg { background: #aaa; font: 1em serif; }
 
 	<g class="alliance">
 		<!-- towers -->
-		<use href="#tower" x="165" y="728" />
-		<use href="#tower" x="165" y="739" />
-		<use href="#tower" x="172" y="733" />
-		<use href="#tower" x="179" y="733" />
-		<use href="#tower" x="186" y="733" />
-		<use href="#tower" x="193" y="734" />
-		<use href="#tower" x="198" y="739" />
-		<use href="#tower" x="205" y="734" />
-		<use href="#tower" x="211" y="732" />
-		<use href="#tower" x="212" y="666" />
-		<use href="#tower" x="213" y="654" />
-		<use href="#tower" x="218" y="731" />
-		<use href="#tower" x="219" y="666" />
-		<use href="#tower" x="220" y="656" />
-		<use href="#tower" x="223" y="635" />
-		<use href="#tower" x="223" y="649" />
-		<use href="#tower" x="225" y="728" />
-		<use href="#tower" x="226" y="662" />
-		<use href="#tower" x="227" y="642" />
-		<use href="#tower" x="229" y="735" />
-		<use href="#tower" x="232" y="722" />
-		<use href="#tower" x="233" y="635" />
-		<use href="#tower" x="233" y="669" />
-		<use href="#tower" x="239" y="721" />
-		<use href="#tower" x="240" y="665" />
-		<use href="#tower" x="240" y="768" />
-		<use href="#tower" x="240" y="775" />
-		<use href="#tower" x="241" y="728" />
-		<use href="#tower" x="245" y="714" />
-		<use href="#tower" x="245" y="735" />
-		<use href="#tower" x="246" y="754" />
-		<use href="#tower" x="246" y="761" />
-		<use href="#tower" x="246" y="793" />
-		<use href="#tower" x="247" y="667" />
-		<use href="#tower" x="247" y="775" />
-		<use href="#tower" x="249" y="674" />
-		<use href="#tower" x="249" y="682" />
-		<use href="#tower" x="250" y="864" />
-		<use href="#tower" x="251" y="660" />
-		<use href="#tower" x="251" y="742" />
-		<use href="#tower" x="252" y="712" />
-		<use href="#tower" x="253" y="754" />
-		<use href="#tower" x="253" y="789" />
-		<use href="#tower" x="254" y="668" />
-		<use href="#tower" x="254" y="675" />
-		<use href="#tower" x="254" y="782" />
-		<use href="#tower" x="254" y="805" />
-		<use href="#tower" x="254" y="809" />
-		<use href="#tower" x="256" y="747" />
-		<use href="#tower" x="257" y="862" />
-		<use href="#tower" x="258" y="816" />
-		<use href="#tower" x="259" y="712" />
-		<use href="#tower" x="259" y="800" />
-		<use href="#tower" x="260" y="793" />
-		<use href="#tower" x="260" y="823" />
-		<use href="#tower" x="261" y="678" />
-		<use href="#tower" x="262" y="753" />
-		<use href="#tower" x="263" y="860" />
-		<use href="#tower" x="265" y="954" />
-		<use href="#tower" x="266" y="712" />
-		<use href="#tower" x="266" y="802" />
-		<use href="#tower" x="268" y="675" />
-		<use href="#tower" x="268" y="732" />
-		<use href="#tower" x="268" y="739" />
-		<use href="#tower" x="268" y="853" />
-		<use href="#tower" x="268" y="927" />
-		<use href="#tower" x="269" y="746" />
-		<use href="#tower" x="270" y="806" />
-		<use href="#tower" x="270" y="846" />
-		<use href="#tower" x="271" y="812" />
-		<use href="#tower" x="272" y="945" />
-		<use href="#tower" x="272" y="952" />
-		<use href="#tower" x="273" y="709" />
-		<use href="#tower" x="274" y="668" />
-		<use href="#tower" x="275" y="681" />
-		<use href="#tower" x="275" y="920" />
-		<use href="#tower" x="275" y="965" />
-		<use href="#tower" x="276" y="705" />
-		<use href="#tower" x="276" y="813" />
-		<use href="#tower" x="276" y="827" />
-		<use href="#tower" x="276" y="931" />
-		<use href="#tower" x="276" y="959" />
-		<use href="#tower" x="277" y="853" />
-		<use href="#tower" x="278" y="688" />
-		<use href="#tower" x="279" y="695" />
-		<use href="#tower" x="279" y="905" />
-		<use href="#tower" x="279" y="944" />
-		<use href="#tower" x="279" y="952" />
-		<use href="#tower" x="280" y="885" />
-		<use href="#tower" x="280" y="920" />
-		<use href="#tower" x="281" y="846" />
-		<use href="#tower" x="281" y="912" />
-		<use href="#tower" x="282" y="938" />
-		<use href="#tower" x="283" y="702" />
-		<use href="#tower" x="283" y="820" />
-		<use href="#tower" x="283" y="924" />
-		<use href="#tower" x="283" y="931" />
-		<use href="#tower" x="283" y="960" />
-		<use href="#tower" x="284" y="860" />
-		<use href="#tower" x="284" y="866" />
-		<use href="#tower" x="284" y="871" />
-		<use href="#tower" x="284" y="919" />
-		<use href="#tower" x="285" y="900" />
-		<use href="#tower" x="286" y="890" />
-		<use href="#tower" x="286" y="907" />
-		<use href="#tower" x="286" y="944" />
-		<use href="#tower" x="288" y="827" />
-		<use href="#tower" x="288" y="841" />
-		<use href="#tower" x="288" y="914" />
-		<use href="#tower" x="290" y="920" />
-		<use href="#tower" x="290" y="927" />
-		<use href="#tower" x="290" y="960" />
-		<use href="#tower" x="291" y="871" />
-		<use href="#tower" x="291" y="878" />
-		<use href="#tower" x="291" y="892" />
-		<use href="#tower" x="291" y="899" />
-		<use href="#tower" x="292" y="885" />
-		<use href="#tower" x="294" y="920" />
-		<use href="#tower" x="294" y="933" />
-		<use href="#tower" x="295" y="834" />
-		<use href="#tower" x="296" y="940" />
-		<use href="#tower" x="297" y="919" />
-		<use href="#tower" x="297" y="958" />
-		<use href="#tower" x="298" y="871" />
-		<use href="#tower" x="298" y="878" />
-		<use href="#tower" x="298" y="885" />
-		<use href="#tower" x="298" y="892" />
-		<use href="#tower" x="298" y="899" />
-		<use href="#tower" x="301" y="869" />
-		<use href="#tower" x="302" y="828" />
-		<use href="#tower" x="302" y="919" />
-		<use href="#tower" x="302" y="940" />
-		<use href="#tower" x="304" y="956" />
-		<use href="#tower" x="305" y="900" />
-		<use href="#tower" x="306" y="905" />
-		<use href="#tower" x="306" y="911" />
-		<use href="#tower" x="307" y="869" />
-		<use href="#tower" x="308" y="815" />
-		<use href="#tower" x="308" y="822" />
-		<use href="#tower" x="308" y="918" />
-		<use href="#tower" x="309" y="940" />
-		<use href="#tower" x="310" y="953" />
-		<use href="#tower" x="312" y="899" />
-		<use href="#tower" x="312" y="904" />
-		<use href="#tower" x="312" y="918" />
-		<use href="#tower" x="313" y="913" />
-		<use href="#tower" x="314" y="808" />
-		<use href="#tower" x="319" y="919" />
-		<use href="#tower" x="321" y="808" />
-		<use href="#tower" x="325" y="923" />
-		<use href="#tower" x="326" y="811" />
-		<use href="#tower" x="330" y="813" />
-		<use href="#tower" x="332" y="921" />
-		<use href="#tower" x="336" y="806" />
-		<use href="#tower" x="339" y="915" />
-		<use href="#tower" x="343" y="804" />
-		<use href="#tower" x="344" y="907" />
-		<use href="#tower" x="346" y="913" />
-		<use href="#tower" x="348" y="816" />
-		<use href="#tower" x="349" y="901" />
-		<use href="#tower" x="350" y="809" />
-		<use href="#tower" x="351" y="906" />
-		<use href="#tower" x="353" y="920" />
-		<use href="#tower" x="354" y="887" />
-		<use href="#tower" x="355" y="816" />
-		<use href="#tower" x="355" y="894" />
-		<use href="#tower" x="360" y="913" />
-		<use href="#tower" x="362" y="818" />
-		<use href="#tower" x="365" y="913" />
-		<use href="#tower" x="368" y="825" />
-		<use href="#tower" x="372" y="908" />
-		<use href="#tower" x="373" y="835" />
-		<use href="#tower" x="375" y="830" />
-		<use href="#tower" x="377" y="842" />
-		<use href="#tower" x="377" y="849" />
-		<use href="#tower" x="382" y="827" />
-		<use href="#tower" x="389" y="820" />
-		<use href="#tower" x="396" y="815" />
-		<use href="#tower" x="403" y="808" />
-		<use href="#tower" x="406" y="815" />
-		<use href="#tower" x="817" y="914" />
-		<use href="#tower" x="823" y="913" />
-		<use href="#tower" x="830" y="917" />
-		<use href="#tower" x="834" y="914" />
-		<use href="#tower" x="841" y="912" />
-		<use href="#tower" x="843" y="998" />
-		<use href="#tower" x="847" y="925" />
-		<use href="#tower" x="847" y="983" />
-		<use href="#tower" x="848" y="911" />
-		<use href="#tower" x="848" y="966" />
-		<use href="#tower" x="849" y="958" />
-		<use href="#tower" x="849" y="1030" />
-		<use href="#tower" x="850" y="998" />
-		<use href="#tower" x="852" y="918" />
-		<use href="#tower" x="853" y="939" />
-		<use href="#tower" x="854" y="925" />
-		<use href="#tower" x="854" y="945" />
-		<use href="#tower" x="854" y="985" />
-		<use href="#tower" x="855" y="904" />
-		<use href="#tower" x="855" y="954" />
-		<use href="#tower" x="855" y="961" />
-		<use href="#tower" x="855" y="968" />
-		<use href="#tower" x="856" y="950" />
-		<use href="#tower" x="856" y="1032" />
-		<use href="#tower" x="857" y="1005" />
-		<use href="#tower" x="857" y="1012" />
-		<use href="#tower" x="859" y="917" />
-		<use href="#tower" x="859" y="924" />
-		<use href="#tower" x="860" y="901" />
-		<use href="#tower" x="861" y="985" />
-		<use href="#tower" x="862" y="945" />
-		<use href="#tower" x="862" y="952" />
-		<use href="#tower" x="862" y="959" />
-		<use href="#tower" x="862" y="966" />
-		<use href="#tower" x="862" y="998" />
-		<use href="#tower" x="863" y="971" />
-		<use href="#tower" x="863" y="978" />
-		<use href="#tower" x="863" y="1034" />
-		<use href="#tower" x="866" y="924" />
-		<use href="#tower" x="868" y="991" />
-		<use href="#tower" x="869" y="945" />
-		<use href="#tower" x="869" y="952" />
-		<use href="#tower" x="869" y="959" />
-		<use href="#tower" x="869" y="966" />
-		<use href="#tower" x="869" y="1027" />
-		<use href="#tower" x="871" y="928" />
-		<use href="#tower" x="872" y="923" />
-		<use href="#tower" x="873" y="927" />
-		<use href="#tower" x="874" y="936" />
-		<use href="#tower" x="874" y="943" />
-		<use href="#tower" x="874" y="1006" />
-		<use href="#tower" x="874" y="1013" />
-		<use href="#tower" x="875" y="992" />
-		<use href="#tower" x="875" y="999" />
-		<use href="#tower" x="876" y="950" />
-		<use href="#tower" x="876" y="957" />
-		<use href="#tower" x="876" y="963" />
-		<use href="#tower" x="876" y="1020" />
-		<use href="#tower" x="878" y="923" />
-		<use href="#tower" x="879" y="930" />
-		<use href="#tower" x="880" y="936" />
-		<use href="#tower" x="881" y="943" />
-		<use href="#tower" x="882" y="923" />
-		<use href="#tower" x="882" y="995" />
-		<use href="#tower" x="882" y="1038" />
-		<use href="#tower" x="883" y="957" />
-		<use href="#tower" x="883" y="964" />
-		<use href="#tower" x="883" y="1027" />
-		<use href="#tower" x="884" y="930" />
-		<use href="#tower" x="885" y="916" />
-		<use href="#tower" x="887" y="937" />
-		<use href="#tower" x="888" y="944" />
-		<use href="#tower" x="888" y="964" />
-		<use href="#tower" x="888" y="998" />
-		<use href="#tower" x="888" y="1034" />
-		<use href="#tower" x="889" y="986" />
-		<use href="#tower" x="889" y="991" />
-		<use href="#tower" x="891" y="957" />
-		<use href="#tower" x="892" y="1013" />
-		<use href="#tower" x="894" y="936" />
-		<use href="#tower" x="896" y="986" />
-		<use href="#tower" x="896" y="992" />
-		<use href="#tower" x="896" y="998" />
-		<use href="#tower" x="899" y="1013" />
-		<use href="#tower" x="901" y="936" />
-		<use href="#tower" x="903" y="993" />
-		<use href="#tower" x="906" y="1000" />
-		<use href="#tower" x="906" y="1013" />
-		<use href="#tower" x="907" y="934" />
-		<use href="#tower" x="913" y="1007" />
-		<use href="#tower" x="920" y="1010" />
-		<use href="#tower" x="927" y="1004" />
-		<use href="#tower" x="933" y="1000" />
-		<use href="#tower" x="940" y="997" />
-		<use href="#tower" x="944" y="1001" />
-		<use href="#tower" x="948" y="1008" />
-		<use href="#tower" x="950" y="995" />
-		<use href="#tower" x="957" y="988" />
-		<use href="#tower" x="964" y="981" />
-		<use href="#tower" x="971" y="974" />
-		<use href="#tower" x="978" y="975" />
-		<use href="#tower" x="955" y="1014" />
-		<use href="#tower" x="962" y="1019" />
-		<use href="#tower" x="966" y="1023" />
-		<use href="#tower" x="972" y="1030" />
-		<use href="#tower" x="978" y="1037" />
-		<use href="#tower" x="984" y="1044" />
-		<use href="#tower" x="991" y="1050" />
-		<use href="#tower" x="995" y="1054" />
-		<use href="#tower" x="998" y="1061" />
-		<use href="#tower" x="998" y="1068" />
-		<use href="#tower" x="1003" y="1072" />
-		<use href="#tower" x="1010" y="1078" />
-		<use href="#tower" x="1016" y="1071" />
-		<use href="#tower" x="1023" y="1065" />
-		<use href="#tower" x="1030" y="1065" />
-		<use href="#tower" x="1037" y="1065" />
-		<use href="#tower" x="1044" y="1065" />
-		<use href="#tower" x="1051" y="1065" />
-		<use href="#tower" x="1056" y="1067" />
+		<use href="#tower" x="165" y="728"/>
+		<use href="#tower" x="165" y="739"/>
+		<use href="#tower" x="172" y="733"/>
+		<use href="#tower" x="179" y="733"/>
+		<use href="#tower" x="186" y="733"/>
+		<use href="#tower" x="193" y="734"/>
+		<use href="#tower" x="198" y="739"/>
+		<use href="#tower" x="205" y="734"/>
+		<use href="#tower" x="211" y="732"/>
+		<use href="#tower" x="212" y="666"/>
+		<use href="#tower" x="213" y="654"/>
+		<use href="#tower" x="218" y="731"/>
+		<use href="#tower" x="219" y="666"/>
+		<use href="#tower" x="220" y="656"/>
+		<use href="#tower" x="223" y="635"/>
+		<use href="#tower" x="223" y="649"/>
+		<use href="#tower" x="225" y="728"/>
+		<use href="#tower" x="226" y="662"/>
+		<use href="#tower" x="227" y="642"/>
+		<use href="#tower" x="229" y="735"/>
+		<use href="#tower" x="232" y="722"/>
+		<use href="#tower" x="233" y="635"/>
+		<use href="#tower" x="233" y="669"/>
+		<use href="#tower" x="239" y="721"/>
+		<use href="#tower" x="240" y="665"/>
+		<use href="#tower" x="240" y="768"/>
+		<use href="#tower" x="240" y="775"/>
+		<use href="#tower" x="241" y="728"/>
+		<use href="#tower" x="245" y="714"/>
+		<use href="#tower" x="245" y="735"/>
+		<use href="#tower" x="246" y="754"/>
+		<use href="#tower" x="246" y="761"/>
+		<use href="#tower" x="246" y="793"/>
+		<use href="#tower" x="247" y="667"/>
+		<use href="#tower" x="247" y="775"/>
+		<use href="#tower" x="249" y="674"/>
+		<use href="#tower" x="249" y="682"/>
+		<use href="#tower" x="250" y="864"/>
+		<use href="#tower" x="251" y="660"/>
+		<use href="#tower" x="251" y="742"/>
+		<use href="#tower" x="252" y="712"/>
+		<use href="#tower" x="253" y="754"/>
+		<use href="#tower" x="253" y="789"/>
+		<use href="#tower" x="254" y="668"/>
+		<use href="#tower" x="254" y="675"/>
+		<use href="#tower" x="254" y="782"/>
+		<use href="#tower" x="254" y="805"/>
+		<use href="#tower" x="254" y="809"/>
+		<use href="#tower" x="256" y="747"/>
+		<use href="#tower" x="257" y="862"/>
+		<use href="#tower" x="258" y="816"/>
+		<use href="#tower" x="259" y="712"/>
+		<use href="#tower" x="259" y="800"/>
+		<use href="#tower" x="260" y="793"/>
+		<use href="#tower" x="260" y="823"/>
+		<use href="#tower" x="261" y="678"/>
+		<use href="#tower" x="262" y="753"/>
+		<use href="#tower" x="263" y="860"/>
+		<use href="#tower" x="265" y="954"/>
+		<use href="#tower" x="266" y="712"/>
+		<use href="#tower" x="266" y="802"/>
+		<use href="#tower" x="268" y="675"/>
+		<use href="#tower" x="268" y="732"/>
+		<use href="#tower" x="268" y="739"/>
+		<use href="#tower" x="268" y="853"/>
+		<use href="#tower" x="268" y="927"/>
+		<use href="#tower" x="269" y="746"/>
+		<use href="#tower" x="270" y="806"/>
+		<use href="#tower" x="270" y="846"/>
+		<use href="#tower" x="271" y="812"/>
+		<use href="#tower" x="272" y="945"/>
+		<use href="#tower" x="272" y="952"/>
+		<use href="#tower" x="273" y="709"/>
+		<use href="#tower" x="274" y="668"/>
+		<use href="#tower" x="275" y="681"/>
+		<use href="#tower" x="275" y="920"/>
+		<use href="#tower" x="275" y="965"/>
+		<use href="#tower" x="276" y="705"/>
+		<use href="#tower" x="276" y="813"/>
+		<use href="#tower" x="276" y="827"/>
+		<use href="#tower" x="276" y="931"/>
+		<use href="#tower" x="276" y="959"/>
+		<use href="#tower" x="277" y="853"/>
+		<use href="#tower" x="278" y="688"/>
+		<use href="#tower" x="279" y="695"/>
+		<use href="#tower" x="279" y="905"/>
+		<use href="#tower" x="279" y="944"/>
+		<use href="#tower" x="279" y="952"/>
+		<use href="#tower" x="280" y="885"/>
+		<use href="#tower" x="280" y="920"/>
+		<use href="#tower" x="281" y="846"/>
+		<use href="#tower" x="281" y="912"/>
+		<use href="#tower" x="282" y="938"/>
+		<use href="#tower" x="283" y="702"/>
+		<use href="#tower" x="283" y="820"/>
+		<use href="#tower" x="283" y="924"/>
+		<use href="#tower" x="283" y="931"/>
+		<use href="#tower" x="283" y="960"/>
+		<use href="#tower" x="284" y="860"/>
+		<use href="#tower" x="284" y="866"/>
+		<use href="#tower" x="284" y="871"/>
+		<use href="#tower" x="284" y="919"/>
+		<use href="#tower" x="285" y="900"/>
+		<use href="#tower" x="286" y="890"/>
+		<use href="#tower" x="286" y="907"/>
+		<use href="#tower" x="286" y="944"/>
+		<use href="#tower" x="288" y="827"/>
+		<use href="#tower" x="288" y="841"/>
+		<use href="#tower" x="288" y="914"/>
+		<use href="#tower" x="290" y="920"/>
+		<use href="#tower" x="290" y="927"/>
+		<use href="#tower" x="290" y="960"/>
+		<use href="#tower" x="291" y="871"/>
+		<use href="#tower" x="291" y="878"/>
+		<use href="#tower" x="291" y="892"/>
+		<use href="#tower" x="291" y="899"/>
+		<use href="#tower" x="292" y="885"/>
+		<use href="#tower" x="294" y="920"/>
+		<use href="#tower" x="294" y="933"/>
+		<use href="#tower" x="295" y="834"/>
+		<use href="#tower" x="296" y="940"/>
+		<use href="#tower" x="297" y="919"/>
+		<use href="#tower" x="297" y="958"/>
+		<use href="#tower" x="298" y="871"/>
+		<use href="#tower" x="298" y="878"/>
+		<use href="#tower" x="298" y="885"/>
+		<use href="#tower" x="298" y="892"/>
+		<use href="#tower" x="298" y="899"/>
+		<use href="#tower" x="301" y="869"/>
+		<use href="#tower" x="302" y="828"/>
+		<use href="#tower" x="302" y="919"/>
+		<use href="#tower" x="302" y="940"/>
+		<use href="#tower" x="304" y="956"/>
+		<use href="#tower" x="305" y="900"/>
+		<use href="#tower" x="306" y="905"/>
+		<use href="#tower" x="306" y="911"/>
+		<use href="#tower" x="307" y="869"/>
+		<use href="#tower" x="308" y="815"/>
+		<use href="#tower" x="308" y="822"/>
+		<use href="#tower" x="308" y="918"/>
+		<use href="#tower" x="309" y="940"/>
+		<use href="#tower" x="310" y="953"/>
+		<use href="#tower" x="312" y="899"/>
+		<use href="#tower" x="312" y="904"/>
+		<use href="#tower" x="312" y="918"/>
+		<use href="#tower" x="313" y="913"/>
+		<use href="#tower" x="314" y="808"/>
+		<use href="#tower" x="319" y="919"/>
+		<use href="#tower" x="321" y="808"/>
+		<use href="#tower" x="325" y="923"/>
+		<use href="#tower" x="326" y="811"/>
+		<use href="#tower" x="330" y="813"/>
+		<use href="#tower" x="332" y="921"/>
+		<use href="#tower" x="336" y="806"/>
+		<use href="#tower" x="339" y="915"/>
+		<use href="#tower" x="343" y="804"/>
+		<use href="#tower" x="344" y="907"/>
+		<use href="#tower" x="346" y="913"/>
+		<use href="#tower" x="348" y="816"/>
+		<use href="#tower" x="349" y="901"/>
+		<use href="#tower" x="350" y="809"/>
+		<use href="#tower" x="351" y="906"/>
+		<use href="#tower" x="353" y="920"/>
+		<use href="#tower" x="354" y="887"/>
+		<use href="#tower" x="355" y="816"/>
+		<use href="#tower" x="355" y="894"/>
+		<use href="#tower" x="360" y="913"/>
+		<use href="#tower" x="362" y="818"/>
+		<use href="#tower" x="365" y="913"/>
+		<use href="#tower" x="368" y="825"/>
+		<use href="#tower" x="372" y="908"/>
+		<use href="#tower" x="373" y="835"/>
+		<use href="#tower" x="375" y="830"/>
+		<use href="#tower" x="377" y="842"/>
+		<use href="#tower" x="377" y="849"/>
+		<use href="#tower" x="382" y="827"/>
+		<use href="#tower" x="389" y="820"/>
+		<use href="#tower" x="396" y="815"/>
+		<use href="#tower" x="403" y="808"/>
+		<use href="#tower" x="406" y="815"/>
+		<use href="#tower" x="817" y="914"/>
+		<use href="#tower" x="823" y="913"/>
+		<use href="#tower" x="830" y="917"/>
+		<use href="#tower" x="834" y="914"/>
+		<use href="#tower" x="841" y="912"/>
+		<use href="#tower" x="843" y="998"/>
+		<use href="#tower" x="847" y="925"/>
+		<use href="#tower" x="847" y="983"/>
+		<use href="#tower" x="848" y="911"/>
+		<use href="#tower" x="848" y="966"/>
+		<use href="#tower" x="849" y="958"/>
+		<use href="#tower" x="849" y="1030"/>
+		<use href="#tower" x="850" y="998"/>
+		<use href="#tower" x="852" y="918"/>
+		<use href="#tower" x="853" y="939"/>
+		<use href="#tower" x="854" y="925"/>
+		<use href="#tower" x="854" y="945"/>
+		<use href="#tower" x="854" y="985"/>
+		<use href="#tower" x="855" y="904"/>
+		<use href="#tower" x="855" y="954"/>
+		<use href="#tower" x="855" y="961"/>
+		<use href="#tower" x="855" y="968"/>
+		<use href="#tower" x="856" y="950"/>
+		<use href="#tower" x="856" y="1032"/>
+		<use href="#tower" x="857" y="1005"/>
+		<use href="#tower" x="857" y="1012"/>
+		<use href="#tower" x="859" y="917"/>
+		<use href="#tower" x="859" y="924"/>
+		<use href="#tower" x="860" y="901"/>
+		<use href="#tower" x="861" y="985"/>
+		<use href="#tower" x="862" y="945"/>
+		<use href="#tower" x="862" y="952"/>
+		<use href="#tower" x="862" y="959"/>
+		<use href="#tower" x="862" y="966"/>
+		<use href="#tower" x="862" y="998"/>
+		<use href="#tower" x="863" y="971"/>
+		<use href="#tower" x="863" y="978"/>
+		<use href="#tower" x="863" y="1034"/>
+		<use href="#tower" x="866" y="924"/>
+		<use href="#tower" x="868" y="991"/>
+		<use href="#tower" x="869" y="945"/>
+		<use href="#tower" x="869" y="952"/>
+		<use href="#tower" x="869" y="959"/>
+		<use href="#tower" x="869" y="966"/>
+		<use href="#tower" x="869" y="1027"/>
+		<use href="#tower" x="871" y="928"/>
+		<use href="#tower" x="872" y="923"/>
+		<use href="#tower" x="873" y="927"/>
+		<use href="#tower" x="874" y="917"/>
+		<use href="#tower" x="874" y="936"/>
+		<use href="#tower" x="874" y="943"/>
+		<use href="#tower" x="874" y="1006"/>
+		<use href="#tower" x="874" y="1013"/>
+		<use href="#tower" x="875" y="992"/>
+		<use href="#tower" x="875" y="999"/>
+		<use href="#tower" x="876" y="950"/>
+		<use href="#tower" x="876" y="957"/>
+		<use href="#tower" x="876" y="963"/>
+		<use href="#tower" x="876" y="1020"/>
+		<use href="#tower" x="878" y="923"/>
+		<use href="#tower" x="879" y="930"/>
+		<use href="#tower" x="880" y="916"/>
+		<use href="#tower" x="880" y="936"/>
+		<use href="#tower" x="881" y="943"/>
+		<use href="#tower" x="882" y="923"/>
+		<use href="#tower" x="882" y="995"/>
+		<use href="#tower" x="882" y="1038"/>
+		<use href="#tower" x="883" y="957"/>
+		<use href="#tower" x="883" y="964"/>
+		<use href="#tower" x="883" y="1027"/>
+		<use href="#tower" x="884" y="930"/>
+		<use href="#tower" x="885" y="916"/>
+		<use href="#tower" x="887" y="937"/>
+		<use href="#tower" x="888" y="944"/>
+		<use href="#tower" x="888" y="964"/>
+		<use href="#tower" x="888" y="998"/>
+		<use href="#tower" x="888" y="1034"/>
+		<use href="#tower" x="889" y="986"/>
+		<use href="#tower" x="889" y="991"/>
+		<use href="#tower" x="891" y="957"/>
+		<use href="#tower" x="892" y="1013"/>
+		<use href="#tower" x="894" y="936"/>
+		<use href="#tower" x="896" y="986"/>
+		<use href="#tower" x="896" y="992"/>
+		<use href="#tower" x="896" y="998"/>
+		<use href="#tower" x="899" y="1013"/>
+		<use href="#tower" x="901" y="936"/>
+		<use href="#tower" x="903" y="993"/>
+		<use href="#tower" x="906" y="1000"/>
+		<use href="#tower" x="906" y="1013"/>
+		<use href="#tower" x="907" y="934"/>
+		<use href="#tower" x="913" y="1007"/>
+		<use href="#tower" x="920" y="1010"/>
+		<use href="#tower" x="927" y="1004"/>
+		<use href="#tower" x="933" y="1000"/>
+		<use href="#tower" x="940" y="997"/>
+		<use href="#tower" x="944" y="1001"/>
+		<use href="#tower" x="948" y="1008"/>
+		<use href="#tower" x="950" y="995"/>
+		<use href="#tower" x="955" y="1014"/>
+		<use href="#tower" x="957" y="988"/>
+		<use href="#tower" x="962" y="1019"/>
+		<use href="#tower" x="964" y="981"/>
+		<use href="#tower" x="966" y="1023"/>
+		<use href="#tower" x="971" y="974"/>
+		<use href="#tower" x="972" y="1030"/>
+		<use href="#tower" x="978" y="975"/>
+		<use href="#tower" x="978" y="1037"/>
+		<use href="#tower" x="979" y="968"/>
+		<use href="#tower" x="981" y="961"/>
+		<use href="#tower" x="984" y="1044"/>
+		<use href="#tower" x="986" y="955"/>
+		<use href="#tower" x="991" y="1050"/>
+		<use href="#tower" x="993" y="954"/>
+		<use href="#tower" x="995" y="1054"/>
+		<use href="#tower" x="998" y="1061"/>
+		<use href="#tower" x="998" y="1068"/>
+		<use href="#tower" x="1000" y="955"/>
+		<use href="#tower" x="1003" y="1072"/>
+		<use href="#tower" x="1007" y="959"/>
+		<use href="#tower" x="1010" y="1078"/>
+		<use href="#tower" x="1014" y="962"/>
+		<use href="#tower" x="1016" y="1071"/>
+		<use href="#tower" x="1021" y="962"/>
+		<use href="#tower" x="1023" y="1065"/>
+		<use href="#tower" x="1025" y="957"/>
+		<use href="#tower" x="1030" y="1065"/>
+		<use href="#tower" x="1032" y="961"/>
+		<use href="#tower" x="1037" y="1065"/>
+		<use href="#tower" x="1039" y="963"/>
+		<use href="#tower" x="1044" y="1065"/>
+		<use href="#tower" x="1046" y="959"/>
+		<use href="#tower" x="1051" y="1065"/>
+		<use href="#tower" x="1053" y="961"/>
+		<use href="#tower" x="1056" y="1067"/>
+		<use href="#tower" x="1060" y="958"/>
+		<use href="#tower" x="1067" y="951"/>
+		<use href="#tower" x="1074" y="944"/>
+		<use href="#tower" x="1081" y="937"/>
+		<use href="#tower" x="1081" y="944"/>
+		<use href="#tower" x="1081" y="951"/>
 
 		<!-- alliance buildings -->
-		<use href="#hq" x="860" y="931"><title>(viv) Plains Headquarters</title></use>
 		<use href="#hq" x="292" y="906"><title>(viv) Wasteland Headquarters</title></use>
+		<use href="#hq" x="860" y="931"><title>(viv) Plains Headquarters</title></use>
 		<use href="#trap" x="868" y="946"><title>(viv) Influencer Trap</title></use>
 	</g>
 
