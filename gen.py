@@ -54,7 +54,7 @@ def main():
     with open('state.csv', newline='') as f:
         context['state'] = list(csv.DictReader(f))
 
-    with open('viv state map.svg', 'w') as f:
+    with open('docs/viv state map.svg', 'w') as f:
         tpl.stream(context).dump(f)
 
     #####
@@ -64,7 +64,7 @@ def main():
 
     context = {}
 
-    with open('viv state map.html', 'w') as f:
+    with open('docs/index.html', 'w') as f:
         tpl.stream(context).dump(f)
 
 if __name__ == '__main__':
