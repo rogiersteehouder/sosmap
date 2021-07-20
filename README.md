@@ -1,6 +1,6 @@
 # State of Survival state map
 
-State map for State of Survival, state 393, ViV and viv alliances.
+State maps for State of Survival, ViV and viv alliances.
 
 ## State Map
 

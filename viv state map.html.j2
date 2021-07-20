@@ -23,11 +23,11 @@ header p { margin: 0; padding: 0 1em; font-size: 0.8em; }
 
 <header>
 <h1>ViV state map</h1>
-<p><a href="viv state map.svg">svg image</a></p>
+<p><a href="{{ filename }}">svg image</a></p>
 </header>
 
 <main>
-{{ Path('docs/viv state map.svg').read_text()|safe }}
+{{ Path('docs/' + filename).read_text()|safe }}
 </main>
 
 <script>

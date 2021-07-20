@@ -46,25 +46,43 @@ def main():
     j2_env.globals['Path'] = pathlib.Path
 
     #####
-    # ViV state map
+    # State 393
     #####
+
     tpl = j2_env.from_string(pathlib.Path('viv state map.svg.j2').read_text())
 
     context = {}
-    with open('state.csv', newline='') as f:
+    with open('state 393.csv', newline='') as f:
         context['state'] = list(csv.DictReader(f))
 
-    with open('docs/viv state map.svg', 'w') as f:
+    with open('docs/393.svg', 'w') as f:
+        tpl.stream(context).dump(f)
+
+    tpl = j2_env.from_string(pathlib.Path('viv state map.html.j2').read_text())
+
+    context = { 'filename': '393.svg' }
+
+    with open('docs/393.html', 'w') as f:
         tpl.stream(context).dump(f)
 
     #####
-    # html version
+    # State 795
     #####
-    tpl = j2_env.from_string(pathlib.Path('viv state map.html.j2').read_text())
+
+    tpl = j2_env.from_string(pathlib.Path('viv state map.svg.j2').read_text())
 
     context = {}
+    with open('state 795.csv', newline='') as f:
+        context['state'] = list(csv.DictReader(f))
 
-    with open('docs/index.html', 'w') as f:
+    with open('docs/795.svg', 'w') as f:
+        tpl.stream(context).dump(f)
+
+    tpl = j2_env.from_string(pathlib.Path('viv state map.html.j2').read_text())
+
+    context = { 'filename': '795.svg' }
+
+    with open('docs/795.html', 'w') as f:
         tpl.stream(context).dump(f)
 
 if __name__ == '__main__':
