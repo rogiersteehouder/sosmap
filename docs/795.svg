@@ -240,6 +240,7 @@ svg { background: #aaa; font: 1em serif; }
 
 		<!-- Other alliances -->
 		<g class="other">
+			<use href="#hq" x="346" y="915"><title>(AoD) Wasteland Headquarters</title></use>
 			<use href="#hq" x="392" y="964"><title>(EVO) Wasteland Headquarters</title></use>
 			<use href="#hq" x="1062" y="1082"><title>(FRE) Wasteland Headquarters</title></use>
 			<use href="#hq" x="357" y="971"><title>(INS) Wasteland Headquarters</title></use>
@@ -249,8 +250,6 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#hq" x="352" y="785"><title>(SUP) Wasteland Headquarters</title></use>
 			<use href="#hq" x="272" y="660"><title>(VNF) Wasteland Headquarters</title></use>
 			<use href="#hq" x="947" y="593"><title>(WIN) Wasteland Headquarters</title></use>
-			<use href="#hq" x="478" y="592"><title>() Plains Headquarters</title></use>
-			<use href="#hq" x="602" y="794"><title>() Plains Headquarters</title></use>
 			<use href="#trap" x="756" y="943"><title>(SOA) Influencer Trap</title></use>
 			<use href="#trap" x="959" y="613"><title>(WIN) Influencer Trap</title></use>
 		</g>
@@ -356,10 +355,40 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="352" y="821" />
 		<use href="#tower" x="352" y="828" />
 		<use href="#tower" x="355" y="889" />
+		<use href="#tower" x="359" y="831" />
+		<use href="#tower" x="362" y="892" />
+		<use href="#tower" x="365" y="831" />
+		<use href="#tower" x="369" y="891" />
+		<use href="#tower" x="372" y="824" />
+		<use href="#tower" x="372" y="831" />
+		<use href="#tower" x="376" y="886" />
+		<use href="#tower" x="414" y="556" />
+		<use href="#tower" x="420" y="563" />
+		<use href="#tower" x="427" y="563" />
+		<use href="#tower" x="434" y="563" />
+		<use href="#tower" x="440" y="570" />
+		<use href="#tower" x="452" y="530" />
+		<use href="#tower" x="454" y="544" />
+		<use href="#tower" x="457" y="523" />
+		<use href="#tower" x="457" y="551" />
+		<use href="#tower" x="457" y="558" />
+		<use href="#tower" x="457" y="565" />
+		<use href="#tower" x="458" y="537" />
+		<use href="#tower" x="458" y="578" />
+		<use href="#tower" x="459" y="572" />
+		<use href="#tower" x="464" y="516" />
+		<use href="#tower" x="464" y="565" />
+		<use href="#tower" x="466" y="572" />
+		<use href="#tower" x="471" y="516" />
+		<use href="#tower" x="478" y="517" />
+		<use href="#tower" x="485" y="516" />
+		<use href="#tower" x="492" y="515" />
+		<use href="#tower" x="499" y="515" />
 
 		<!-- alliance buildings -->
 		<use href="#hq" x="345" y="847"><title>(ViV) Wasteland Headquarters</title></use>
-		<use href="#trap" x="337" y="860"><title>(ViV) Influencer Trap</title></use>
+		<use href="#hq" x="445" y="577"><title>(ViV) Plains Headquarters</title></use>
+		<use href="#trap" x="465" y="571"><title>(ViV) Influencer Trap</title></use>
 	</g>
 
 	<!-- labs -->
