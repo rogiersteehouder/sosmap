@@ -261,6 +261,7 @@ svg { background: #aaa; font: 1em serif; }
 
 	<g class="alliance">
 		<!-- towers -->
+		<use href="#tower" x="144" y="856" />
 		<use href="#tower" x="151" y="856" />
 		<use href="#tower" x="153" y="849" />
 		<use href="#tower" x="160" y="843" />
@@ -315,6 +316,7 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="282" y="707" />
 		<use href="#tower" x="282" y="847" />
 		<use href="#tower" x="284" y="693" />
+		<use href="#tower" x="288" y="843" />
 		<use href="#tower" x="288" y="939" />
 		<use href="#tower" x="289" y="850" />
 		<use href="#tower" x="290" y="689" />
@@ -363,17 +365,42 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="372" y="824" />
 		<use href="#tower" x="372" y="831" />
 		<use href="#tower" x="376" y="886" />
+		<use href="#tower" x="379" y="821" />
+		<use href="#tower" x="386" y="823" />
+		<use href="#tower" x="408" y="447" />
+		<use href="#tower" x="408" y="550" />
+		<use href="#tower" x="410" y="429" />
+		<use href="#tower" x="410" y="436" />
 		<use href="#tower" x="414" y="556" />
+		<use href="#tower" x="415" y="446" />
+		<use href="#tower" x="415" y="474" />
+		<use href="#tower" x="417" y="432" />
+		<use href="#tower" x="417" y="439" />
+		<use href="#tower" x="417" y="453" />
 		<use href="#tower" x="420" y="563" />
+		<use href="#tower" x="422" y="460" />
+		<use href="#tower" x="422" y="467" />
+		<use href="#tower" x="422" y="474" />
+		<use href="#tower" x="427" y="481" />
 		<use href="#tower" x="427" y="563" />
+		<use href="#tower" x="434" y="481" />
 		<use href="#tower" x="434" y="563" />
+		<use href="#tower" x="435" y="488" />
+		<use href="#tower" x="437" y="509" />
 		<use href="#tower" x="440" y="570" />
+		<use href="#tower" x="441" y="495" />
+		<use href="#tower" x="444" y="502" />
+		<use href="#tower" x="444" y="509" />
+		<use href="#tower" x="447" y="544" />
+		<use href="#tower" x="450" y="563" />
+		<use href="#tower" x="451" y="516" />
 		<use href="#tower" x="452" y="530" />
 		<use href="#tower" x="454" y="544" />
 		<use href="#tower" x="457" y="523" />
 		<use href="#tower" x="457" y="551" />
 		<use href="#tower" x="457" y="558" />
 		<use href="#tower" x="457" y="565" />
+		<use href="#tower" x="457" y="585" />
 		<use href="#tower" x="458" y="537" />
 		<use href="#tower" x="458" y="578" />
 		<use href="#tower" x="459" y="572" />
@@ -396,9 +423,10 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="530" y="498" />
 		<use href="#tower" x="537" y="492" />
 		<use href="#tower" x="544" y="486" />
+		<use href="#tower" x="548" y="479" />
 		<use href="#tower" x="555" y="477" />
 		<use href="#tower" x="562" y="477" />
-		<use href="#tower" x="548" y="479" />
+		<use href="#tower" x="569" y="467" />
 		<use href="#tower" x="569" y="474" />
 		<use href="#tower" x="576" y="473" />
 
