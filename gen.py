@@ -65,26 +65,6 @@ def main():
     with open('docs/393.html', 'w') as f:
         tpl.stream(context).dump(f)
 
-    #####
-    # State 795
-    #####
-
-    tpl = j2_env.from_string(pathlib.Path('viv state map.svg.j2').read_text())
-
-    context = {}
-    with open('state 795.csv', newline='') as f:
-        context['state'] = list(csv.DictReader(f))
-
-    with open('docs/795.svg', 'w') as f:
-        tpl.stream(context).dump(f)
-
-    tpl = j2_env.from_string(pathlib.Path('viv state map.html.j2').read_text())
-
-    context = { 'filename': '795.svg' }
-
-    with open('docs/795.html', 'w') as f:
-        tpl.stream(context).dump(f)
-
 if __name__ == '__main__':
 	# pylint: disable=all
     main()

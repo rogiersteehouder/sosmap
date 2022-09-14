@@ -65,6 +65,10 @@ svg { background: #aaa; font: 1em serif; }
 	<symbol id="trap" width="2" height="2">
 		<rect x="0" y="0" width="2" height="2" />
 	</symbol>
+	<!-- colosseum -->
+	<symbol id="colosseum" width="2" height="2">
+		<rect x="0" y="0" width="2" height="2" />
+	</symbol>
 	<!-- tower - offset from center: 3 -->
 	<symbol id="tower" width="7" height="7">
 		<rect x="0" y="0" width="7" height="7" class="influence" />
@@ -159,6 +163,9 @@ svg { background: #aaa; font: 1em serif; }
 		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', 'ViV') %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Influencer Trap</title></use>
 		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', 'ViV') %}
+		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Colosseum</title></use>
+		{% endfor %}
 	</g>
 
 	<!-- labs -->
@@ -196,6 +203,9 @@ svg { background: #aaa; font: 1em serif; }
 		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', 'viv') %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Influencer Trap</title></use>
 		{% endfor %}
+		{% for row in state|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', 'viv') %}
+		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Colosseum</title></use>
+		{% endfor %}
 	</g>
 
 	<!-- labs -->
@@ -218,7 +228,9 @@ svg { background: #aaa; font: 1em serif; }
 
 </g>
 
+<!--
 <text x="880" y="830">ViV</text>
 <text x="900" y="650">viv</text>
+-->
 
 </svg>
