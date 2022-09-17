@@ -1,0 +1,11 @@
+[states.393]
+csv = "state 393.csv"
+file_base = "393"
+
+[states.393.alliances.ViV]
+name = "ViV"
+color = "#00f"
+
+[states.393.alliances.viv]
+name = "viv"
+color = "#909"

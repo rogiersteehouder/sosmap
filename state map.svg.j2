@@ -9,11 +9,10 @@ svg { background: #aaa; font: 1em serif; }
 .state .other { fill: #990; }
 /*.state .other { display: none; }*/
 
-.viv-1 .alliance { fill: #00f; }
-.viv-1 .labs { fill: #00f; }
-
-.viv-2 .alliance { fill: #909; }
-.viv-2 .labs { fill: #909; }
+{% for alliance in alliances %}
+.{{ alliance.name }} .alliance { fill: {{ alliance.color }}; }
+.{{ alliance.name }} .labs { fill: {{ alliance.color }}; }
+{% endfor %}
 
 .new { fill: #070; }
 .old { fill: #900; }
@@ -122,109 +121,64 @@ svg { background: #aaa; font: 1em serif; }
 
 		<!-- Labs -->
 		<g class="labs">
-			{% for row in state|selectattr('type', 'eq', 'lab1') if row.owner not in ('viv', 'ViV', 'new') %}
+			{% for i in range(1, 5) %}
+			{% for row in state|selectattr('type', 'eq', 'lab{}'.format(i)) if row.owner not in owners %}
 			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>{% if row.owner %}({{row.owner}}) {% endif %}{{row.descr|e}}</title></use>
 			{% endfor %}
-			{% for row in state|selectattr('type', 'eq', 'lab2') if row.owner not in ('viv', 'ViV', 'new') %}
-			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>{% if row.owner %}({{row.owner}}) {% endif %}{{row.descr|e}}</title></use>
-			{% endfor %}
-			{% for row in state|selectattr('type', 'eq', 'lab3') if row.owner not in ('viv', 'ViV', 'new') %}
-			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>{% if row.owner %}({{row.owner}}) {% endif %}{{row.descr|e}}</title></use>
-			{% endfor %}
-			{% for row in state|selectattr('type', 'eq', 'lab4') if row.owner not in ('viv', 'ViV', 'new') %}
-			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>{% if row.owner %}({{row.owner}}) {% endif %}{{row.descr|e}}</title></use>
 			{% endfor %}
 		</g>
 
 		<!-- Other alliances -->
 		<g class="other">
-			{% for row in state|selectattr('type', 'eq', 'hq') if row.owner not in ('viv', 'ViV', 'new') %}
+			{% for row in state|selectattr('type', 'eq', 'hq') if row.owner not in owners %}
 			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
 			{% endfor %}
-			{% for row in state|selectattr('type', 'eq', 'trap') if row.owner not in ('viv', 'ViV', 'new') %}
+			{% for row in state|selectattr('type', 'eq', 'trap') if row.owner not in owners %}
 			<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"><title>({{row.owner}}) Influencer Trap</title></use>
 			{% endfor %}
 		</g>
 	</g>
 
-	<!-- ViV -->
-	<g class="viv-1">
+	{% for alliance in alliances %}
+	<!-- {{ alliance.name }} -->
+	<g class="{{ alliance.name }}">
 
 	<g class="alliance">
 		<!-- towers -->
-		{% for row in state|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 3}}" y="{{row.y|int - 3}}"{{ ' class="{}" '.format(row.class)|safe if row.class }} />
 		{% endfor %}
 
 		<!-- alliance buildings -->
-		{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Influencer Trap</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Colosseum</title></use>
 		{% endfor %}
 	</g>
 
 	<!-- labs -->
 	<g class="labs">
-		{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', 'ViV') %}
+		{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', 'ViV') %}
-		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
-		{% endfor %}
-	</g>
-
-	</g>
-
-
-	<!-- viv -->
-	<g class="viv-2">
-
-	<g class="alliance">
-		<!-- towers -->
-		{% for row in state|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int - 3}}" y="{{row.y|int - 3}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}/>
-		{% endfor %}
-
-		<!-- alliance buildings -->
-		{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
-		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Influencer Trap</title></use>
-		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Colosseum</title></use>
-		{% endfor %}
-	</g>
-
-	<!-- labs -->
-	<g class="labs">
-		{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
-		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
-		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', 'viv') %}
-		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
-		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', 'viv') %}
+		{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
 	</g>
 
 	</g>
+	{% endfor %}
 
 </g>
 
