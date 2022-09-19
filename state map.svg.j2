@@ -96,25 +96,13 @@ svg { background: #aaa; font: 1em serif; }
 			<rect x="654" y="654" height="1" width="1" />
 			<rect x="648" y="648" height="4" width="4" />
 		</g>
-		<!--
-		<g fill-opacity="0.7">
-			<path d="M 644 646 h -6 v -2 h -14 v 14 h 18 v -2 h 2 z" fill="#00f"><title>WLC</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(630,-652) rotate(45,0,0)">WLC</text>
-			<path d="M 644 656 v 2 h -2 v 24 h 8 v -26 z" fill="#660"><title>EnK</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(642,-670) rotate(45,0,0)">EnK</text>
-			<path d="M 656 656 v 2 h 2 v 2 h 2 v 22 h -10 v -26 z" fill="#060"><title>EAS</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(652,-670) rotate(45,0,0)">EAS</text>
-			<path d="M 656 656 v 2 h 2 v 2 h 2 v 2 h 22 v -10 h -26 z" fill="#900"><title>cap</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(664,-658) rotate(45,0,0)">cap</text>
-			<path d="M 656 646 h 2 v -2 h 2 v -2 h 22 v 10 h -26 z" fill="#f66"><title>666</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(664,-648) rotate(45,0,0)">666</text>
-			<path d="M 656 646 h 2 v -2 h 2 v -2 h 12 v -16 h -14 v 12 h -2 z" fill="#060"><title>Tca</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(664,-636) rotate(45,0,0)">Tca</text>
-			<path d="M 656 644 v -6 h 2 v -20 h -8 v 26 z" fill="#099"><title>TW1</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(650,-636) rotate(45,0,0)">TW1</text>
-			<path d="M 644 644 v -2 h -2 v -2 h -2 v -2 h -2 v -20 h 12 v 26 z" fill="#ff6"><title>UDA</title></path><text x="0" y="0" class="cap-label" transform="scale(1,-1) translate(642,-636) rotate(45,0,0)" style="fill:#000">UDA</text>
-		</g>
-		-->
 
 		<!-- Fortified structures -->
 		<g class="forts">
-			{% for row in state|selectattr('type', 'eq', 'facility') %}
+			{% for row in buildings|selectattr('type', 'eq', 'facility') %}
 			<use href="#{{row.type}}" x="{{row.x|int - 28}}" y="{{row.y|int - 28}}"><title>Fortified Facility {{row.descr|e}}{% if row.owner %} ({{row.owner}}){% endif %}</title></use>
 			{% endfor %}
-			{% for row in state|selectattr('type', 'eq', 'bunker') %}
+			{% for row in buildings|selectattr('type', 'eq', 'bunker') %}
 			<use href="#{{row.type}}" x="{{row.x|int - 18}}" y="{{row.y|int - 18}}"><title>Fortified Bunker {{row.descr|e}}{% if row.owner %} ({{row.owner}}){% endif %}</title></use>
 			{% endfor %}
 		</g>
@@ -122,7 +110,7 @@ svg { background: #aaa; font: 1em serif; }
 		<!-- Labs -->
 		<g class="labs">
 			{% for i in range(1, 5) %}
-			{% for row in state|selectattr('type', 'eq', 'lab{}'.format(i)) if row.owner not in owners %}
+			{% for row in buildings|selectattr('type', 'eq', 'lab{}'.format(i)) if row.owner not in owners %}
 			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>{% if row.owner %}({{row.owner}}) {% endif %}{{row.descr|e}}</title></use>
 			{% endfor %}
 			{% endfor %}
@@ -130,10 +118,10 @@ svg { background: #aaa; font: 1em serif; }
 
 		<!-- Other alliances -->
 		<g class="other">
-			{% for row in state|selectattr('type', 'eq', 'hq') if row.owner not in owners %}
+			{% for row in buildings|selectattr('type', 'eq', 'hq') if row.owner not in owners %}
 			<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
 			{% endfor %}
-			{% for row in state|selectattr('type', 'eq', 'trap') if row.owner not in owners %}
+			{% for row in buildings|selectattr('type', 'eq', 'trap') if row.owner not in owners %}
 			<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"><title>({{row.owner}}) Influencer Trap</title></use>
 			{% endfor %}
 		</g>
@@ -145,34 +133,34 @@ svg { background: #aaa; font: 1em serif; }
 
 	<g class="alliance">
 		<!-- towers -->
-		{% for row in state|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'tower')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 3}}" y="{{row.y|int - 3}}"{{ ' class="{}" '.format(row.class)|safe if row.class }} />
 		{% endfor %}
 
 		<!-- alliance buildings -->
-		{% for row in state|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'hq')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) {{row.descr|e}} Headquarters</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'trap')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Influencer Trap</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Colosseum</title></use>
 		{% endfor %}
 	</g>
 
 	<!-- labs -->
 	<g class="labs">
-		{% for row in state|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'lab1')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'lab2')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'lab3')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
-		{% for row in state|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', alliance.name) %}
+		{% for row in buildings|selectattr('type', 'eq', 'lab4')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int - 6}}" y="{{row.y|int - 6}}"><title>({{row.owner}}) {{row.descr|e}}</title></use>
 		{% endfor %}
 	</g>

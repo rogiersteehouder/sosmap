@@ -1,11 +1,20 @@
-[states.393]
-csv = "state 393.csv"
-file_base = "393"
+title = "ViV state maps"
+output_dir = "docs"
 
-[states.393.alliances.ViV]
+[[states]]
+number = 393
+description = "The original ViV: Viking Violence."
+
+[[states.alliances]]
 name = "ViV"
 color = "#00f"
 
-[states.393.alliances.viv]
+[[states.alliances]]
 name = "viv"
 color = "#909"
+
+[[states]]
+number = 999
+description = "For me to test new things."
+csv = "state-test.csv"
+file_base = "test"

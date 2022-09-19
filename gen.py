@@ -15,6 +15,8 @@ import datetime
 import pathlib
 import csv
 
+from pydantic import BaseModel, Field, PrivateAttr
+
 import jinja2
 import jinja2.ext
 
@@ -24,26 +26,42 @@ except ImportError:
     import tomli as tomllib
 
 
-class NewlineRemover(jinja2.ext.Extension):
-    def filter_stream(self, stream):
-        skip = True
-        for token in stream:
-            if skip:
-                if token.type == "data" and token.value == "\n":
-                    continue
-                if token.type == "data" and token.value.lstrip().startswith(
-                    "<!DOCTYPE"
-                ):
-                    token = jinja2.lexer.Token(
-                        token.lineno, token.type, token.value.lstrip()
-                    )
-                    skip = False
-            yield token
+class Alliance(BaseModel):
+    """Alliance in State of Survival"""
+
+    name: str
+    color: str = "#000"
+
+
+class State(BaseModel):
+    """State in State of Survival"""
+
+    number: int
+    description: str = ""
+    csv: str | None = None  # default derived from fields in __init__
+    file_base: str | None = None  # default derived from fields in __init__
+    alliances: list[Alliance] = Field(default_factory=list)
+    svg_file: pathlib.Path | None = None
+    html_file: pathlib.Path | None = None
+
+    def __init__(self, **data):
+        super().__init__(**data)
+        if self.csv is None:
+            self.csv = f"state-{self.number}.csv"
+        if self.file_base is None:
+            self.file_base = f"{self.number}"
+
+
+class Config(BaseModel):
+    """Configuration"""
+
+    title: str = "State maps"
+    output_dir: pathlib.Path = pathlib.Path("docs")
+    states: list[State] = Field(default_factory=list)
 
 
 def main():
     exts = [jinja2.ext.loopcontrols]
-    exts.append(NewlineRemover)
 
     j2_env = jinja2.Environment(
         loader=jinja2.FileSystemLoader("."),
@@ -56,30 +74,35 @@ def main():
     j2_env.globals["datetime"] = datetime.datetime
     j2_env.globals["Path"] = pathlib.Path
 
-    out_dir = pathlib.Path("docs")
+    cfg = Config.parse_obj(tomllib.loads(pathlib.Path("gen.toml").read_text()))
+    #print(cfg)
+    #return
+
     svg_tpl = j2_env.from_string(pathlib.Path("state map.svg.j2").read_text())
     html_tpl = j2_env.from_string(pathlib.Path("state map.html.j2").read_text())
 
-    cfg = tomllib.loads(pathlib.Path("gen.toml").read_text())
-
-    for state in cfg["states"].values():
-        print(state)
-        file_base = out_dir / state["file_base"]
+    for state in cfg.states:
+        file_base = cfg.output_dir / state.file_base
 
         context = {}
-        with open(state["csv"], newline="") as f:
-            context["state"] = list(csv.DictReader(f))
-        context["alliances"] = list(state["alliances"].values())
-        context["owners"] = [x["name"] for x in state["alliances"].values()]
+        context["cfg"] = cfg
+        with open(state.csv, newline="") as f:
+            context["buildings"] = list(csv.DictReader(f))
+        context["alliances"] = state.alliances
+        context["owners"] = [x.name for x in state.alliances]
+        context["svg_file"] = state.svg_file = file_base.with_suffix(".svg")
+        context["html_file"] = state.html_file = file_base.with_suffix(".html")
 
-        print(context)
-
-        with file_base.with_suffix(".svg").open("w") as f:
+        with context["svg_file"].open("w") as f:
             svg_tpl.stream(context).dump(f)
-            context["filename"] = f.name
 
-        with file_base.with_suffix(".html").open("w") as f:
+        with context["html_file"].open("w") as f:
             html_tpl.stream(context).dump(f)
+
+    context = {"cfg": cfg}
+    html_tpl = j2_env.from_string(pathlib.Path("index.html.j2").read_text())
+    with (cfg.output_dir / "index.html").open("w") as f:
+        html_tpl.stream(context).dump(f)
 
 
 if __name__ == "__main__":

@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>{{ cfg.title }}</title>
+<style>
 body.light {
 	--color-r-primary: 170;
 	--color-g-primary: 33;
@@ -246,3 +253,46 @@ textarea { resize: vertical; }
 	body { display: block; }
 	body > main { margin: 0; }
 }
+</style>
+</head>
+
+<body class="light">
+
+<header>
+	<h1>{{ cfg.title }}</h1>
+</header>
+
+<main>
+
+{% for state in cfg.states %}
+<article>
+	<header>
+		<h2>State {{ state.number }}</h2>
+	</header>
+
+	<section>
+		<p>{{ state.description }}</p>
+		<ul>
+			<li><a href="{{ state.html_file.name }}">State map (zoomable html)</a></li>
+			<li><a href="{{ state.svg_file.name }}">State map (svg image)</a></li>
+		</ul>
+	</section>
+</article>
+{% endfor %}
+</main>
+
+<nav id="site-nav">
+<h6 class="speach">Navigation</h6>
+
+<ul class="menu">
+	{% for state in cfg.states %}
+	<li><input type="checkbox" id="menu-{{ state.number }}" aria-label="submenu" checked /><label for="menu-{{ state.number }}">{{ state.number }}</label><ul>
+		<li><a href="{{ state.html_file.name }}">Zoomable html</a></li>
+		<li><a href="{{ state.svg_file.name }}">Image svg</a></li>
+	</ul></li>
+	{% endfor %}
+</ul>
+</nav>
+
+</body>
+</html>
