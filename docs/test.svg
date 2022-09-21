@@ -228,6 +228,8 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#lab4" x="802" y="702"><title>Troop Attack +8%</title></use>
 		</g>
 
+		
+
 		<!-- Other alliances -->
 		<g class="other">
 			<use href="#hq" x="868" y="756"><title>(viv) Plains Headquarters</title></use>

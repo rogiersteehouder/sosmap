@@ -4,6 +4,17 @@ output_dir = "docs"
 [[states]]
 number = 393
 description = "The original ViV: Viking Violence."
+extra = """
+<g fill-opacity="0.5">
+<path d="M 656 656 v 4 h 2 v 6 h 8 v -10 z" fill="#00f"><title>ViV</title></path>
+<path d="M 656 656 v 4 h 2 v 10 h -8 v -14 z" fill="#0f0"><title>TNF</title></path>
+<path d="M 644 656 h -2 v 14 h 8 v -14 z" fill="#f60"><title>ReX</title></path>
+<path d="M 644 644 h -14 v 12 h 14 z" fill="#66f"><title>WLC &amp; wnb</title></path>
+<path d="M 644 644 h -10 v -10 h 10 z" fill="#f66"><title>hes</title></path>
+<path d="M 644 644 h 8 v -14 h -8 z" fill="#f00"><title>HES</title></path>
+<path d="M 656 644 h 14 v 12 h -14 z" fill="#ff0"><title>UDA &amp; REM</title></path>
+</g>
+"""
 
 [[states.alliances]]
 name = "ViV"

@@ -31,6 +31,7 @@ class Alliance(BaseModel):
 
     name: str
     color: str = "#000"
+    extra: str = ""
 
 
 class State(BaseModel):
@@ -38,6 +39,7 @@ class State(BaseModel):
 
     number: int
     description: str = ""
+    extra: str = ""
     csv: str | None = None  # default derived from fields in __init__
     file_base: str | None = None  # default derived from fields in __init__
     alliances: list[Alliance] = Field(default_factory=list)
@@ -88,6 +90,7 @@ def main():
         context["cfg"] = cfg
         with open(state.csv, newline="") as f:
             context["buildings"] = list(csv.DictReader(f))
+        context['state'] = state
         context["alliances"] = state.alliances
         context["owners"] = [x.name for x in state.alliances]
         context["svg_file"] = state.svg_file = file_base.with_suffix(".svg")

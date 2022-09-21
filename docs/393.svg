@@ -232,6 +232,17 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#lab4" x="802" y="702"><title>Troop Attack +8%</title></use>
 		</g>
 
+		<g fill-opacity="0.5">
+<path d="M 656 656 v 4 h 2 v 6 h 8 v -10 z" fill="#00f"><title>ViV</title></path>
+<path d="M 656 656 v 4 h 2 v 10 h -8 v -14 z" fill="#0f0"><title>TNF</title></path>
+<path d="M 644 656 h -2 v 14 h 8 v -14 z" fill="#f60"><title>ReX</title></path>
+<path d="M 644 644 h -14 v 12 h 14 z" fill="#66f"><title>WLC &amp; wnb</title></path>
+<path d="M 644 644 h -10 v -10 h 10 z" fill="#f66"><title>hes</title></path>
+<path d="M 644 644 h 8 v -14 h -8 z" fill="#f00"><title>HES</title></path>
+<path d="M 656 644 h 14 v 12 h -14 z" fill="#ff0"><title>UDA &amp; REM</title></path>
+</g>
+
+
 		<!-- Other alliances -->
 		<g class="other">
 		</g>
@@ -317,6 +328,8 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#hq" x="827" y="712"><title>(ViV) Plains Headquarters</title></use>
 		<use href="#hq" x="997" y="604"><title>(ViV) Wasteland Headquarters</title></use>
 		<use href="#trap" x="825" y="719"><title>(ViV) Influencer Trap</title></use>
+
+		
 	</g>
 
 	<!-- labs -->
@@ -404,6 +417,8 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#hq" x="1230" y="935"><title>(viv) Wasteland Headquarters</title></use>
 		<use href="#trap" x="868" y="762"><title>(viv) Influencer Trap</title></use>
 		<use href="#colosseum" x="862" y="762"><title>(viv) Colosseum</title></use>
+
+		
 	</g>
 
 	<!-- labs -->

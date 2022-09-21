@@ -116,6 +116,8 @@ svg { background: #aaa; font: 1em serif; }
 			{% endfor %}
 		</g>
 
+		{{ state.extra|safe }}
+
 		<!-- Other alliances -->
 		<g class="other">
 			{% for row in buildings|selectattr('type', 'eq', 'hq') if row.owner not in owners %}
@@ -147,6 +149,8 @@ svg { background: #aaa; font: 1em serif; }
 		{% for row in buildings|selectattr('type', 'eq', 'colosseum')|selectattr('owner', 'eq', alliance.name) %}
 		<use href="#{{row.type}}" x="{{row.x|int}}" y="{{row.y|int}}"{{ ' class="{}" '.format(row.class)|safe if row.class }}><title>({{row.owner}}) Colosseum</title></use>
 		{% endfor %}
+
+		{{ alliance.extra|safe }}
 	</g>
 
 	<!-- labs -->
