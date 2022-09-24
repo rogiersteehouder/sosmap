@@ -9,7 +9,7 @@ __date__ = "2022-09-17"
 __version__ = "1.1"
 
 # 2021-03-24 - 1.0
-# 2022-09-17 - 1.1
+# 2022-09-17 - 1.1 - Using configuration file now
 
 import datetime
 import pathlib
@@ -77,8 +77,6 @@ def main():
     j2_env.globals["Path"] = pathlib.Path
 
     cfg = Config.parse_obj(tomllib.loads(pathlib.Path("gen.toml").read_text()))
-    #print(cfg)
-    #return
 
     svg_tpl = j2_env.from_string(pathlib.Path("state map.svg.j2").read_text())
     html_tpl = j2_env.from_string(pathlib.Path("state map.html.j2").read_text())
@@ -96,15 +94,15 @@ def main():
         context["svg_file"] = state.svg_file = file_base.with_suffix(".svg")
         context["html_file"] = state.html_file = file_base.with_suffix(".html")
 
-        with context["svg_file"].open("w") as f:
+        with context["svg_file"].open("w", newline="\n") as f:
             svg_tpl.stream(context).dump(f)
 
-        with context["html_file"].open("w") as f:
+        with context["html_file"].open("w", newline="\n") as f:
             html_tpl.stream(context).dump(f)
 
     context = {"cfg": cfg}
     html_tpl = j2_env.from_string(pathlib.Path("index.html.j2").read_text())
-    with (cfg.output_dir / "index.html").open("w") as f:
+    with (cfg.output_dir / "index.html").open("w", newline="\n") as f:
         html_tpl.stream(context).dump(f)
 
 
