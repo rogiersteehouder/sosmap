@@ -24,6 +24,14 @@ color = "#00f"
 name = "viv"
 color = "#909"
 
+[[states.alliances]]
+name = "FFS"
+color = "#b77"
+
+[[states.alliances]]
+name = "UDA"
+color = "#933"
+
 [[states]]
 number = 999
 description = "For me to test new things."

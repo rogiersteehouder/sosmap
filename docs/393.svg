@@ -13,6 +13,10 @@ svg { background: #aaa; font: 1em serif; }
 .ViV .labs { fill: #00f; }
 .viv .alliance { fill: #909; }
 .viv .labs { fill: #909; }
+.FFS .alliance { fill: #b77; }
+.FFS .labs { fill: #b77; }
+.UDA .alliance { fill: #933; }
+.UDA .labs { fill: #933; }
 
 .new { fill: #070; }
 .old { fill: #900; }
@@ -201,7 +205,6 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#lab2" x="1222" y="62"><title>Troop Defense +5%</title></use>
 			<use href="#lab2" x="1242" y="342"><title>Troop Attack +5%</title></use>
 			<use href="#lab2" x="1242" y="922"><title>Training Speed +5%</title></use>
-			<use href="#lab3" x="882" y="742"><title>(UDA) Construction Speed +8%</title></use>
 			<use href="#lab3" x="402" y="562"><title>March Speed +15%</title></use>
 			<use href="#lab3" x="402" y="702"><title>Construction Speed +8%</title></use>
 			<use href="#lab3" x="422" y="422"><title>Construction Speed +8%</title></use>
@@ -214,7 +217,6 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#lab3" x="742" y="882"><title>Research Speed +8%</title></use>
 			<use href="#lab3" x="822" y="422"><title>Construction Speed +8%</title></use>
 			<use href="#lab3" x="822" y="822"><title>March Speed +15%</title></use>
-			<use href="#lab4" x="802" y="702"><title>(UDA) Troop Attack +8%</title></use>
 			<use href="#lab4" x="462" y="582"><title>Troop Defense +8%</title></use>
 			<use href="#lab4" x="582" y="462"><title>Troop Attack +8%</title></use>
 			<use href="#lab4" x="702" y="802"><title>Troop Defense +8%</title></use>
@@ -235,7 +237,6 @@ svg { background: #aaa; font: 1em serif; }
 		<!-- Other alliances -->
 		<g class="other">
 			<use href="#hq" x="797" y="605"><title>(BnE) Plains Headquarters</title></use>
-			<use href="#hq" x="813" y="818"><title>(FFS) Plains Headquarters</title></use>
 			<use href="#hq" x="776" y="528"><title>(FOX) Plains Headquarters</title></use>
 			<use href="#hq" x="506" y="770"><title>(hes) Plains Headquarters</title></use>
 			<use href="#hq" x="608" y="943"><title>(hes) Wasteland Headquarters</title></use>
@@ -250,11 +251,9 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#hq" x="762" y="778"><title>(Spc) Plains Headquarters</title></use>
 			<use href="#hq" x="718" y="502"><title>(TNF) Plains Headquarters</title></use>
 			<use href="#hq" x="704" y="788"><title>(uda) Plains Headquarters</title></use>
-			<use href="#hq" x="789" y="694"><title>(UDA) Plains Headquarters</title></use>
 			<use href="#hq" x="535" y="507"><title>(WLC) Plains Headquarters</title></use>
 			<use href="#hq" x="511" y="574"><title>(wnb) Plains Headquarters</title></use>
 			<use href="#trap" x="743" y="609"><title>(BnE) Influencer Trap</title></use>
-			<use href="#trap" x="820" y="818"><title>(FFS) Influencer Trap</title></use>
 			<use href="#trap" x="781" y="522"><title>(FOX) Influencer Trap</title></use>
 			<use href="#trap" x="497" y="770"><title>(hes) Influencer Trap</title></use>
 			<use href="#trap" x="523" y="717"><title>(HES) Influencer Trap</title></use>
@@ -268,7 +267,6 @@ svg { background: #aaa; font: 1em serif; }
 			<use href="#trap" x="766" y="784"><title>(Spc) Influencer Trap</title></use>
 			<use href="#trap" x="724" y="506"><title>(TNF) Influencer Trap</title></use>
 			<use href="#trap" x="710" y="783"><title>(uda) Influencer Trap</title></use>
-			<use href="#trap" x="781" y="689"><title>(UDA) Influencer Trap</title></use>
 			<use href="#trap" x="574" y="549"><title>(WLC) Influencer Trap</title></use>
 			<use href="#trap" x="521" y="586"><title>(wnb) Influencer Trap</title></use>
 		</g>
@@ -338,6 +336,7 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="841" y="726" />
 		<use href="#tower" x="841" y="753" />
 		<use href="#tower" x="842" y="762" />
+		<use href="#tower" x="844" y="692" />
 		<use href="#tower" x="844" y="734" />
 		<use href="#tower" x="844" y="746" />
 		<use href="#tower" x="845" y="670" />
@@ -351,12 +350,24 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="858" y="656" />
 		<use href="#tower" x="859" y="635" />
 		<use href="#tower" x="859" y="642" />
+		<use href="#tower" x="859" y="702" />
+		<use href="#tower" x="859" y="709" />
+		<use href="#tower" x="860" y="716" />
+		<use href="#tower" x="860" y="723" />
 		<use href="#tower" x="860" y="735" />
 		<use href="#tower" x="863" y="649" />
+		<use href="#tower" x="866" y="708" />
 		<use href="#tower" x="866" y="729" />
+		<use href="#tower" x="867" y="715" />
+		<use href="#tower" x="867" y="722" />
+		<use href="#tower" x="872" y="714" />
 		<use href="#tower" x="873" y="537" />
 		<use href="#tower" x="873" y="727" />
+		<use href="#tower" x="874" y="721" />
+		<use href="#tower" x="877" y="525" />
+		<use href="#tower" x="877" y="532" />
 		<use href="#tower" x="880" y="538" />
+		<use href="#tower" x="880" y="720" />
 		<use href="#tower" x="880" y="727" />
 		<use href="#tower" x="886" y="545" />
 		<use href="#tower" x="887" y="727" />
@@ -464,7 +475,6 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="1198" y="625" />
 		<use href="#tower" x="1205" y="618" />
 		<use href="#tower" x="1212" y="618" />
-		<use href="#tower" x="1213" y="617" />
 		<use href="#tower" x="1219" y="616" />
 
 		<!-- alliance buildings -->
@@ -495,6 +505,14 @@ svg { background: #aaa; font: 1em serif; }
 
 	<g class="alliance">
 		<!-- towers -->
+		<use href="#tower" x="627" y="878" />
+		<use href="#tower" x="627" y="885" />
+		<use href="#tower" x="627" y="892" />
+		<use href="#tower" x="627" y="899" />
+		<use href="#tower" x="634" y="906" />
+		<use href="#tower" x="636" y="920" />
+		<use href="#tower" x="636" y="927" />
+		<use href="#tower" x="637" y="913" />
 		<use href="#tower" x="848" y="628" />
 		<use href="#tower" x="848" y="722" />
 		<use href="#tower" x="848" y="749" />
@@ -591,24 +609,41 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="975" y="810" />
 		<use href="#tower" x="977" y="620" />
 		<use href="#tower" x="977" y="627" />
+		<use href="#tower" x="977" y="637" />
 		<use href="#tower" x="980" y="817" />
 		<use href="#tower" x="984" y="614" />
+		<use href="#tower" x="984" y="644" />
 		<use href="#tower" x="987" y="817" />
+		<use href="#tower" x="991" y="640" />
 		<use href="#tower" x="994" y="812" />
+		<use href="#tower" x="998" y="647" />
 		<use href="#tower" x="999" y="807" />
+		<use href="#tower" x="1005" y="654" />
 		<use href="#tower" x="1006" y="807" />
+		<use href="#tower" x="1012" y="660" />
 		<use href="#tower" x="1013" y="803" />
+		<use href="#tower" x="1019" y="664" />
 		<use href="#tower" x="1020" y="807" />
+		<use href="#tower" x="1026" y="665" />
 		<use href="#tower" x="1027" y="807" />
+		<use href="#tower" x="1033" y="660" />
 		<use href="#tower" x="1034" y="807" />
+		<use href="#tower" x="1040" y="660" />
 		<use href="#tower" x="1041" y="807" />
+		<use href="#tower" x="1047" y="660" />
 		<use href="#tower" x="1048" y="807" />
+		<use href="#tower" x="1054" y="660" />
 		<use href="#tower" x="1055" y="804" />
+		<use href="#tower" x="1061" y="656" />
 		<use href="#tower" x="1062" y="799" />
+		<use href="#tower" x="1068" y="656" />
 		<use href="#tower" x="1069" y="794" />
 		<use href="#tower" x="1074" y="789" />
+		<use href="#tower" x="1075" y="653" />
 		<use href="#tower" x="1081" y="789" />
+		<use href="#tower" x="1082" y="657" />
 		<use href="#tower" x="1088" y="782" />
+		<use href="#tower" x="1089" y="657" />
 		<use href="#tower" x="1094" y="654" />
 		<use href="#tower" x="1095" y="775" />
 		<use href="#tower" x="1098" y="661" />
@@ -639,7 +674,6 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="1166" y="697" />
 		<use href="#tower" x="1169" y="835" />
 		<use href="#tower" x="1170" y="857" />
-		<use href="#tower" x="1172" y="864" />
 		<use href="#tower" x="1173" y="696" />
 		<use href="#tower" x="1175" y="836" />
 		<use href="#tower" x="1177" y="822" />
@@ -667,7 +701,6 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="1208" y="787" />
 		<use href="#tower" x="1210" y="638" />
 		<use href="#tower" x="1210" y="720" />
-		<use href="#tower" x="1215" y="776" />
 		<use href="#tower" x="1215" y="783" />
 		<use href="#tower" x="1216" y="631" />
 		<use href="#tower" x="1216" y="727" />
@@ -692,8 +725,8 @@ svg { background: #aaa; font: 1em serif; }
 		<use href="#tower" x="1257" y="776" />
 
 		<!-- alliance buildings -->
+		<use href="#hq" x="634" y="934"><title>(viv) Wasteland Headquarters</title></use>
 		<use href="#hq" x="868" y="756"><title>(viv) Plains Headquarters</title></use>
-		<use href="#hq" x="1193" y="801"><title>(viv) Wasteland Headquarters</title></use>
 		<use href="#trap" x="868" y="762"><title>(viv) Influencer Trap</title></use>
 		<use href="#colosseum" x="862" y="762"><title>(viv) Colosseum</title></use>
 
@@ -704,6 +737,170 @@ svg { background: #aaa; font: 1em serif; }
 	<g class="labs">
 		<use href="#lab1" x="1162" y="842"><title>(viv) Resource Gathering Speed +5%</title></use>
 		<use href="#lab1" x="1242" y="762"><title>(viv) Research Speed +5%</title></use>
+	</g>
+
+	</g>
+	<!-- FFS -->
+	<g class="FFS">
+
+	<g class="alliance">
+		<!-- towers -->
+		<use href="#tower" x="716" y="808" />
+		<use href="#tower" x="722" y="808" />
+		<use href="#tower" x="729" y="808" />
+		<use href="#tower" x="736" y="808" />
+		<use href="#tower" x="743" y="815" />
+		<use href="#tower" x="750" y="815" />
+		<use href="#tower" x="757" y="822" />
+		<use href="#tower" x="764" y="819" />
+		<use href="#tower" x="771" y="819" />
+		<use href="#tower" x="778" y="818" />
+		<use href="#tower" x="785" y="818" />
+		<use href="#tower" x="792" y="818" />
+		<use href="#tower" x="795" y="741" />
+		<use href="#tower" x="796" y="713" />
+		<use href="#tower" x="796" y="720" />
+		<use href="#tower" x="796" y="727" />
+		<use href="#tower" x="796" y="734" />
+		<use href="#tower" x="799" y="818" />
+		<use href="#tower" x="802" y="748" />
+		<use href="#tower" x="802" y="755" />
+		<use href="#tower" x="802" y="762" />
+		<use href="#tower" x="802" y="769" />
+		<use href="#tower" x="806" y="818" />
+		<use href="#tower" x="807" y="776" />
+		<use href="#tower" x="809" y="754" />
+		<use href="#tower" x="813" y="797" />
+		<use href="#tower" x="813" y="804" />
+		<use href="#tower" x="813" y="811" />
+		<use href="#tower" x="814" y="783" />
+		<use href="#tower" x="814" y="790" />
+		<use href="#tower" x="814" y="832" />
+		<use href="#tower" x="816" y="750" />
+		<use href="#tower" x="820" y="815" />
+		<use href="#tower" x="823" y="748" />
+		<use href="#tower" x="828" y="742" />
+		<use href="#tower" x="835" y="740" />
+		<use href="#tower" x="842" y="739" />
+		<use href="#tower" x="849" y="739" />
+		<use href="#tower" x="856" y="745" />
+		<use href="#tower" x="863" y="745" />
+		<use href="#tower" x="870" y="742" />
+		<use href="#tower" x="877" y="742" />
+
+		<!-- alliance buildings -->
+		<use href="#hq" x="813" y="818"><title>(FFS) Plains Headquarters</title></use>
+		<use href="#trap" x="820" y="818"><title>(FFS) Influencer Trap</title></use>
+
+		
+	</g>
+
+	<!-- labs -->
+	<g class="labs">
+	</g>
+
+	</g>
+	<!-- UDA -->
+	<g class="UDA">
+
+	<g class="alliance">
+		<!-- towers -->
+		<use href="#tower" x="740" y="654" />
+		<use href="#tower" x="740" y="661" />
+		<use href="#tower" x="740" y="668" />
+		<use href="#tower" x="740" y="675" />
+		<use href="#tower" x="740" y="681" />
+		<use href="#tower" x="740" y="688" />
+		<use href="#tower" x="740" y="695" />
+		<use href="#tower" x="740" y="702" />
+		<use href="#tower" x="747" y="668" />
+		<use href="#tower" x="747" y="675" />
+		<use href="#tower" x="747" y="682" />
+		<use href="#tower" x="747" y="690" />
+		<use href="#tower" x="747" y="697" />
+		<use href="#tower" x="747" y="704" />
+		<use href="#tower" x="754" y="654" />
+		<use href="#tower" x="754" y="668" />
+		<use href="#tower" x="754" y="675" />
+		<use href="#tower" x="754" y="682" />
+		<use href="#tower" x="754" y="690" />
+		<use href="#tower" x="754" y="697" />
+		<use href="#tower" x="754" y="704" />
+		<use href="#tower" x="761" y="652" />
+		<use href="#tower" x="761" y="659" />
+		<use href="#tower" x="761" y="666" />
+		<use href="#tower" x="761" y="673" />
+		<use href="#tower" x="761" y="680" />
+		<use href="#tower" x="761" y="687" />
+		<use href="#tower" x="761" y="694" />
+		<use href="#tower" x="761" y="701" />
+		<use href="#tower" x="761" y="708" />
+		<use href="#tower" x="768" y="655" />
+		<use href="#tower" x="768" y="662" />
+		<use href="#tower" x="768" y="669" />
+		<use href="#tower" x="768" y="676" />
+		<use href="#tower" x="768" y="683" />
+		<use href="#tower" x="768" y="690" />
+		<use href="#tower" x="768" y="697" />
+		<use href="#tower" x="768" y="704" />
+		<use href="#tower" x="768" y="711" />
+		<use href="#tower" x="775" y="656" />
+		<use href="#tower" x="775" y="664" />
+		<use href="#tower" x="775" y="671" />
+		<use href="#tower" x="775" y="678" />
+		<use href="#tower" x="775" y="683" />
+		<use href="#tower" x="775" y="690" />
+		<use href="#tower" x="775" y="697" />
+		<use href="#tower" x="775" y="704" />
+		<use href="#tower" x="775" y="711" />
+		<use href="#tower" x="782" y="678" />
+		<use href="#tower" x="782" y="683" />
+		<use href="#tower" x="782" y="690" />
+		<use href="#tower" x="782" y="697" />
+		<use href="#tower" x="782" y="704" />
+		<use href="#tower" x="782" y="711" />
+		<use href="#tower" x="789" y="678" />
+		<use href="#tower" x="789" y="684" />
+		<use href="#tower" x="789" y="690" />
+		<use href="#tower" x="789" y="708" />
+		<use href="#tower" x="789" y="715" />
+		<use href="#tower" x="796" y="708" />
+		<use href="#tower" x="803" y="694" />
+		<use href="#tower" x="810" y="695" />
+		<use href="#tower" x="817" y="695" />
+		<use href="#tower" x="824" y="702" />
+		<use href="#tower" x="827" y="815" />
+		<use href="#tower" x="831" y="705" />
+		<use href="#tower" x="833" y="809" />
+		<use href="#tower" x="836" y="802" />
+		<use href="#tower" x="838" y="709" />
+		<use href="#tower" x="838" y="762" />
+		<use href="#tower" x="840" y="795" />
+		<use href="#tower" x="841" y="776" />
+		<use href="#tower" x="843" y="769" />
+		<use href="#tower" x="843" y="783" />
+		<use href="#tower" x="844" y="790" />
+		<use href="#tower" x="845" y="715" />
+		<use href="#tower" x="845" y="755" />
+		<use href="#tower" x="852" y="722" />
+		<use href="#tower" x="852" y="748" />
+		<use href="#tower" x="859" y="729" />
+		<use href="#tower" x="859" y="741" />
+		<use href="#tower" x="866" y="734" />
+		<use href="#tower" x="873" y="732" />
+		<use href="#tower" x="880" y="735" />
+
+		<!-- alliance buildings -->
+		<use href="#hq" x="789" y="694"><title>(UDA) Plains Headquarters</title></use>
+		<use href="#trap" x="781" y="689"><title>(UDA) Influencer Trap</title></use>
+
+		
+	</g>
+
+	<!-- labs -->
+	<g class="labs">
+		<use href="#lab3" x="882" y="742"><title>(UDA) Construction Speed +8%</title></use>
+		<use href="#lab4" x="802" y="702"><title>(UDA) Troop Attack +8%</title></use>
 	</g>
 
 	</g>
